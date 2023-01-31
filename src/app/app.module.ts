@@ -3,20 +3,33 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AcercademiModule } from './acercademi/acercademi.module';
+import { ProyectosComponent } from './proyectos/proyectos.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { NavbarModule } from './navbar/navbar/navbar.module';
+import { AcercadeComponent } from './acercade/acercade.component';
+import { ExperienciaComponent } from './experiencia/experiencia.component';
+import { EducacionComponent } from './educacion/educacion.component';
+import { HabilidadesComponent } from './habilidades/habilidades.component';
+import { FooterComponent } from './footer/footer.component';
+import { BannerComponent } from './banner/banner.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    ProyectosComponent,
+    NavbarComponent,
+    AcercadeComponent,
+    ExperienciaComponent,
+    EducacionComponent,
+    HabilidadesComponent,
+    FooterComponent,
+    BannerComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    AcercademiModule,
-    NavbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

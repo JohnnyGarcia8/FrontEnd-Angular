@@ -88,8 +88,12 @@
             ],
             "styles": [
               "src/styles.css"
+
             ],
-            "scripts": []
+            "scripts": [
+
+              
+            ]
           }
         }
       }
