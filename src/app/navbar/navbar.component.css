@@ -1,0 +1,25 @@
+/**************** Navbar ************************/
+.navbar.navbar-expand-lg.bg-primary.fixed-top{
+  padding: 4px  0px;
+}
+ul.list-group{
+  font-size: 17.7px;
+  padding: 0px;
+}
+i.fa-brands.fa-linkedin-in.fa-2xl:hover{
+  color: #1e90ff;
+}
+i.fa-regular.fa-envelope.fa-2xl:hover{
+  color: #c65d37;
+}
+i.fa-brands.fa-github.fa-2xl:hover{
+  color:#f0ffff;
+}
+i.fa-solid.fa-user-lock.fa-2xl:hover{
+  color:#57d4ed;
+}
+
+.list-group{
+  --bs-list-group-bg:none;
+  --bs-list-group-border-color:none;
+}
