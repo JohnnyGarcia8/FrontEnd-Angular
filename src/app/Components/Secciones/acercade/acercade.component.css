@@ -1,0 +1,21 @@
+
+section.acerca_de_mi{
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 15px;
+  padding: 15px;   
+}
+h1{
+  -webkit-text-stroke: 2.3px #4ab7df !important;
+  color: #fff !important;
+  font-style:oblique;
+  font-weight: 900;
+}
+  
+h4{
+  font-family:'Poppins', sans-serif; 
+}
+    
+
+
+

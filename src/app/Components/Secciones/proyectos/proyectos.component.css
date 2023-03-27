@@ -1,0 +1,21 @@
+
+section.proyectos{
+ 
+  color:var(--theme-color);
+  font-size:2.4rem;
+  font-weight: 900;
+  padding-bottom: 1rem;
+  text-align: center;  
+}
+h1{
+  -webkit-text-stroke: 2.3px #4ab7df !important;
+  color: #fff !important;
+  font-style:oblique;
+  font-weight: 900;
+}
+
+h4{
+  font-family:'Poppins'; 
+}
+  
+

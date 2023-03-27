@@ -1,0 +1,61 @@
+
+section.habilidades{
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+  margin: 15px;
+  padding: 15px;  
+}
+  
+.container{
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+    
+h1{
+  -webkit-text-stroke: 2.3px #4ab7df !important;
+  color: #ffffff !important;
+  font-style:oblique;
+  font-weight: 900;
+}
+.col-md-6{
+  padding: 1.5rem;
+}
+h6{
+  font-family:'Poppins';
+  font-size: 1.2rem;
+  font-weight: 550;
+}
+.progress .progress-bar {
+  border-radius: 10px;
+  transition: 2s;
+  
+}
+.progress-bar{ 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  white-space: nowrap;
+  width: var(--w);
+  animation: Aumentar 2.5s ease-in-out;
+}
+
+@keyframes Aumentar{
+  0%{width:0%;}
+  100%{width:var(--w)}
+}
+
+.bg-secondary{
+  background-color: #eb8724 !important;
+}
+.bg-info{
+  background-color: #0BCEAF !important;
+}
+.bg-warning{
+  background-color: #f9f912 !important;
+}
+
