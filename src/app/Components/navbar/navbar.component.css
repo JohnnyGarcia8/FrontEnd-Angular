@@ -1,25 +1,120 @@
-/**************** Navbar ************************/
-.navbar.navbar-expand-lg.bg-primary.fixed-top{
-  padding: 4px  0px;
-}
-ul.list-group{
-  font-size: 17.7px;
-  padding: 0px;
-}
-i.fa-brands.fa-linkedin-in.fa-2xl:hover{
-  color: #1e90ff;
-}
-i.fa-regular.fa-envelope.fa-2xl:hover{
-  color: #c65d37;
-}
-i.fa-brands.fa-github.fa-2xl:hover{
-  color:#f0ffff;
-}
-i.fa-solid.fa-user-lock.fa-2xl:hover{
-  color:#57d4ed;
+
+/******************************* NAVBAR ***************************************/
+.header {
+  box-shadow: 0 0.1rem 0.1rem var(--navbar-shadow-color); /** sombra navbar **/
+  top: 0;
+  width: 100%;
+  z-index: 100;
 }
 
-.list-group{
-  --bs-list-group-bg:none;
-  --bs-list-group-border-color:none;
+.navbar {
+  background-color: var(--nav-footer-color);
+  display: flex;
+  align-items: center;
+  padding: 0.6rem 0.8rem;
+  margin: 0 auto;
 }
+
+/*********** Logo ************/
+.logo img {
+ height: 3rem;
+ width: auto;
+ display: flex;
+}
+.logo img:hover{ /*efecto de agrandar elemento*/
+  transform: scale(1.13);
+  transition: all 0.8s;
+}
+
+/************ Menu ***************/
+.menu{
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-item {
+  padding: 0 0.8rem;
+}
+.nav-link.active{
+  color: var(--text-color1);
+}
+.nav-link {
+  font-family:"Noto", sans-serif;
+  color: var( --text-color1);
+  font-size: 1.3rem;
+  font-weight: 500; /*grosor de la letra*/
+  text-transform: uppercase; /*mayúscula*/
+}
+.nav-link:hover{
+  color:var(--secondary-color);
+  transform: scale(1.05);
+  transition: all 0.6s;
+}
+li.btn{
+  padding-left: 2rem;
+ 
+}
+.btn:hover{
+  color:#57d4ed; 
+  transform: scale(1.3); /*efecto de agrandar y su tiempo*/
+  transition: all 0.8s;
+} 
+.open-menu,
+.close-menu { /*oculto iconos*/
+  display: none;
+}
+
+/************* Navbar Menu Mobile ****************/
+@media (max-width: 768px) {
+.logo img {
+  height: 2.8rem;
+  width: auto;
+  display: flex;
+}
+
+.menu{
+  justify-content: none;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  align-items: center;
+  background-color: var(--menu-mobile-background-color);  
+  height: 100%;
+  overflow-y: auto;
+ /*efecto de opacidad retardado*/
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.6s;
+}
+
+.nav-link{
+  color: var( --text-color1);
+  line-height: 4.36rem;
+  font-size: 1.3rem;
+}
+
+.open-menu,
+.close-menu { /*se ven los iconos*/
+  display: block; 
+  border: none;
+  background: none;
+}
+
+.close-menu {
+  align-self: flex-end;
+  padding: 2rem 1.5rem;
+}
+
+.menu_opened {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.menu a:hover,
+.menu a.selected {
+  color: var(--secondary-color);
+}}

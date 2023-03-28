@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+/******************************* MAIN ********************************/
+/**** Fonts *****/
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+:root { /**** defino variables de colores (que voy a usar seguido) *****/
+  --nav-footer-color: #0d6efd;
+  --text-color1: #fff;
+  --text-color2: #000;
+  --primary-color:#124f88;
+  --secondary-color: #F7C331;
+  --third-color:#1cb680;
+  --fourth-color:#b67c27;
+  --navbar-shadow-color: #3476fb;
+  --menu-mobile-background-color: #3A4460;
+}
+
+html{
+  scroll-behavior:smooth; /**** scroll mas lento *****/
+}
+
+section[id] {
+  scroll-margin-top: 3.75rem; /**** espacio entre navbar y secciones al usar menu *****/
+}
+
+body { 
+  background-color: #c9e5f6;
+  padding-top: 4.38rem;
+  color: var(--text-color1);
+}
+
+/***** encuadre (padding) desk ********/
+.horizontal-padding {
+  padding-left: 3.13rem;
+  padding-right: 3.13rem;
+}
+.vertical-padding {
+  padding-top: 4.37rem;
+  padding-bottom: 4.37rem;
+}
+
+/***** encuadre (padding) mobile ********/
+@media (max-width: 768px){
+.horizontal-padding {
+  padding-left: 0.94rem;
+  padding-right: 0.94rem;
+}
+.vertical-padding {
+  padding-top: 1.56rem;
+  padding-bottom: 1.4rem;
+}}
