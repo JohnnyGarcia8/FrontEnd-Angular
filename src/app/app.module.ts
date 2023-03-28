@@ -3,8 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { InicioComponent } from './Components/inicio/inicio.component';
-import { ErrorComponent } from './Components/error/error.component';
+import { InicioComponent } from './Components/Inicio/inicio.component';
+import { ErrorComponent } from './Components/Error/error.component';
 
 
 import { NavbarComponent } from './Components/navbar/navbar.component';

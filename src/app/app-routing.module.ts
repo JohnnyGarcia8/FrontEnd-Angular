@@ -1,14 +1,14 @@
 import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { InicioComponent } from './Components/inicio/inicio.component';
-import { DashboardComponent } from './Dashboard/dashboard/dashboard.component';
-import { ErrorComponent } from './Components/error/error.component';
+import { InicioComponent } from './Components/Inicio/inicio.component';
+
+import { ErrorComponent } from './Components/Error/error.component';
 
 
 
 const routes: Routes = [
   {path: '', component:InicioComponent},
-  {path:'dashboard', component:DashboardComponent},
+ /* {path:'dashboard', component:DashboardComponent},*/
   {path:'**', component:ErrorComponent},
 ];
 

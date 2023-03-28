@@ -1,11 +1,7 @@
 /******************* Fondo **********************/
 #Banner{
-  background-image: url(../../assets/img/pexels-teclado.jpg);
-  background-position: center;
-  background-size: 100%;
-  margin:auto;
-  background-repeat: no-repeat;
-  min-height: 65vh;
-  padding: 345px;
-  
-} 
+    background-image: url(../../../assets/img/Foto-banner.jpg);
+    background-position: top;
+    margin:auto;
+    background-repeat: no-repeat;
+}
