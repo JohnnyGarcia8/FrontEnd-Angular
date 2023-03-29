@@ -3,19 +3,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { InicioComponent } from './Components/Inicio/inicio.component';
 import { ErrorComponent } from './Components/Error/error.component';
 
+import { InicioComponent } from './Components/Pagina-Main/inicio/inicio.component';
+import { NavbarComponent } from './Components/Pagina-Main/Secciones/navbar/navbar.component';
+import { LoginComponent } from './Components/Pagina-Main/Secciones/navbar/login/login.component';
+import { BannerComponent } from './Components/Pagina-Main/Secciones/banner/banner.component';
+import { AcercadeComponent } from './Components/Pagina-Main/Secciones/perfil/acercade.component';
+import { ExperienciaComponent } from './Components/Pagina-Main/Secciones/experiencias/experiencia.component';
+import { HabilidadesComponent } from './Components/Pagina-Main/Secciones/habilidades/habilidades.component';
+import { ProyectosComponent } from './Components/Pagina-Main/Secciones/proyectos/proyectos.component';
+import { ContactoComponent } from './Components/Pagina-Main/Secciones/contacto/contacto.component';
+import { FooterComponent } from './Components/Pagina-Main/Secciones/footer/footer.component';
 
-import { NavbarComponent } from './Components/navbar/navbar.component';
-import { AcercadeComponent } from './Components/Secciones/perfil/acercade.component';
-import { ExperienciaComponent } from './Components/Secciones/experiencias/experiencia.component';
-import { HabilidadesComponent } from './Components/Secciones/habilidades/habilidades.component';
-import { ProyectosComponent } from './Components/Secciones/proyectos/proyectos.component';
-import { FooterComponent } from './Components/Secciones/footer/footer.component';
-import { BannerComponent } from './Components/banner/banner.component';
-import { LoginComponent } from './Components/navbar/login/login.component';
-import { ContactoComponent } from './Components/Secciones/contacto/contacto.component';
+
+import { DashboardComponent } from './Components/Dashboard/dashboard/dashboard.component';
+import { DhNavbarComponent } from './Components/Dashboard/Dh-secciones/dh-navbar/dh-navbar.component';
+import { DhBannerComponent } from './Components/Dashboard/Dh-secciones/dh-banner/dh-banner.component';
+import { DhPerfilComponent } from './Components/Dashboard/Dh-secciones/dh-perfil/dh-perfil.component';
+import { DhExperienciasComponent } from './Components/Dashboard/Dh-secciones/dh-experiencias/dh-experiencias.component';
+import { DhHabilidadesComponent } from './Components/Dashboard/Dh-secciones/dh-habilidades/dh-habilidades.component';
+import { DhProyectosComponent } from './Components/Dashboard/Dh-secciones/dh-proyectos/dh-proyectos.component';
+import { DhContactoComponent } from './Components/Dashboard/Dh-secciones/dh-contacto/dh-contacto.component';
+import { DhFooterComponent } from './Components/Dashboard/Dh-secciones/dh-footer/dh-footer.component';
 
 
 
@@ -26,20 +36,28 @@ import { ContactoComponent } from './Components/Secciones/contacto/contacto.comp
 @NgModule({
   declarations: [
     AppComponent,
-    InicioComponent,
-
     ErrorComponent,
     
-    
+    InicioComponent,
     NavbarComponent,
+    LoginComponent,
+    BannerComponent,
     AcercadeComponent,
     ExperienciaComponent,
     HabilidadesComponent,
     ProyectosComponent,
-    FooterComponent,
-    BannerComponent,
-    LoginComponent,
     ContactoComponent,
+    FooterComponent,
+  
+    DashboardComponent,
+    DhNavbarComponent,
+    DhBannerComponent,
+    DhPerfilComponent,
+    DhExperienciasComponent,
+    DhHabilidadesComponent,
+    DhProyectosComponent,
+    DhContactoComponent,
+    DhFooterComponent,
     
   ],
 
