@@ -1,61 +1,67 @@
-
-section.habilidades{
-  font-family: "Roboto", sans-serif;
-  box-sizing: border-box;
-  margin: 15px;
-  padding: 15px;  
-}
-  
-.container{
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-    
-h1{
-  -webkit-text-stroke: 2.3px #4ab7df !important;
-  color: #ffffff !important;
+.skills-title{
+  text-transform: uppercase;
+  color:var(--text-color1);
+  font-size:4.68rem;
   font-style:oblique;
   font-weight: 900;
+  padding-bottom: 1rem;
 }
+
+.container-fluid{
+  padding: 0%;
+}
+
 .col-md-6{
-  padding: 1.5rem;
+  padding: 4rem;
 }
-h6{
-  font-family:'Poppins';
-  font-size: 1.2rem;
-  font-weight: 550;
+
+.tecnologia, .porcentaje {
+  font-family:'Poppins', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-color2);
 }
+
 .progress .progress-bar {
-  border-radius: 10px;
+  border-radius: 0.6rem;
   transition: 2s;
-  
 }
 .progress-bar{ 
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   justify-content: center;
-  overflow: hidden;
   text-align: center;
-  white-space: nowrap;
-  width: var(--w);
-  animation: Aumentar 2.5s ease-in-out;
+  white-space: nowrap; /*los espacios en blanco q sobran y los saltos de línea se eliminan*/
+  width: var(--w); 
+  animation: Aumentar 2.5s ease-in-out; /*empieza lento, acelera en el medio y termina lento*/
+}
+
+#html{
+  background-color: #eb8724;
+}
+#css{
+  background-color: #0BCEAF;
+}
+#javascript{
+  background-color: #f9f912;
 }
 
 @keyframes Aumentar{
   0%{width:0%;}
-  100%{width:var(--w)}
+  100%{width:var(--w)} /*llama a cada valor que tiene w(width)*/
 }
 
-.bg-secondary{
-  background-color: #eb8724 !important;
+/************* Habilidades mobile ************/
+@media(max-width: 768px) {
+.skills-title{
+  font-size:2.6rem;
 }
-.bg-info{
-  background-color: #0BCEAF !important;
+.container-fluid{
+  padding: 0%;
 }
-.bg-warning{
-  background-color: #f9f912 !important;
+.col-md-6{
+  padding: 1rem 0;
 }
-
+h6{
+  font-size: 1.05rem;
+}}

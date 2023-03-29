@@ -9,13 +9,13 @@ import { ErrorComponent } from './Components/Error/error.component';
 
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { AcercadeComponent } from './Components/Secciones/perfil/acercade.component';
-import { ExperienciaComponent } from './Components/Secciones/experiencia/experiencia.component';
-import { EducacionComponent } from './Components/Secciones/educacion/educacion.component';
+import { ExperienciaComponent } from './Components/Secciones/experiencias/experiencia.component';
 import { HabilidadesComponent } from './Components/Secciones/habilidades/habilidades.component';
 import { ProyectosComponent } from './Components/Secciones/proyectos/proyectos.component';
 import { FooterComponent } from './Components/Secciones/footer/footer.component';
 import { BannerComponent } from './Components/banner/banner.component';
 import { LoginComponent } from './Components/navbar/login/login.component';
+import { ContactoComponent } from './Components/Secciones/contacto/contacto.component';
 
 
 
@@ -34,12 +34,12 @@ import { LoginComponent } from './Components/navbar/login/login.component';
     NavbarComponent,
     AcercadeComponent,
     ExperienciaComponent,
-    EducacionComponent,
     HabilidadesComponent,
     ProyectosComponent,
     FooterComponent,
     BannerComponent,
     LoginComponent,
+    ContactoComponent,
     
   ],
 

@@ -14,7 +14,9 @@
   padding: 0.6rem 0.8rem;
   margin: 0 auto;
 }
-
+.container-fluid{
+  padding: 0;
+}
 /*********** Logo ************/
 .logo img {
  height: 3rem;

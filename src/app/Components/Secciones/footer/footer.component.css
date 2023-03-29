@@ -1,17 +1,28 @@
 
 .footer {
   box-sizing: border-box ;
-  font-family:'Poppins';
-  color: #fff;
-  background-color:  #0d6efd;
-  padding: 20px;
-  text-align: center;
-  font-size: 0.95rem;
+  font-family:'Poppins' , sans-serif;
+  color:var(--text-color1);
+  background-color:var(--nav-footer-color);
+  font-size: 0.9rem;
 }
-p{
+#footer {
+ padding: 0.5rem;
+}
+#contenedor-info{
   margin: 0.1rem;
 }
-a {
-  text-decoration: none;
-  color:#fff;
+.return {
+  text-decoration: none; /*texto a subrayado*/
+  color:var(--text-color1);
 }
+/************* Footer mobile ************/
+@media(max-width: 768px) {
+.footer {
+  padding: 0.1rem;
+  font-size: 0.73rem;
+}
+#footer {
+  padding: 0.2rem;
+}}
+

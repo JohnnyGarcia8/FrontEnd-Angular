@@ -1,0 +1,113 @@
+.experience{
+  background-color:var(--primary-color);
+  color:var(--text-color1);
+  padding: 3.13rem 1.25rem;
+  border-radius: 0.5rem;
+}
+.contenido-seccion{
+  max-width: 81.25rem;
+  margin: auto;
+}
+.experience-title{
+  text-align: center;
+  text-transform: uppercase;
+  color:var(--text-color1);
+  font-size:4.58rem;
+  font-style:oblique;
+  font-weight: 900;
+  padding-bottom: 1rem;
+}
+.subtitle{
+  font-size: 2.3rem;
+  text-align: center;
+  padding-bottom: 1.25rem;
+  margin-bottom: 0.625rem;
+}
+.fila{
+  display: flex;
+  justify-content: space-between; 
+}
+.col{
+  font-family: "Poppins", sans-serif;
+}
+.col.izquierda{
+  padding-top: 2.3rem;
+  padding-right: 2.19rem;
+}
+.col.derecha{
+  padding-top: 2.3rem;
+  padding-left: 2.19rem;
+}
+
+.item.der, .item.izq{ 
+  padding: 1.25rem;
+  margin-bottom: 1.875rem;
+  background-color: #366993;
+  position: relative;
+  border-radius: 0.4rem; 
+}
+
+.nombre-empresa, .nombre-institucion{
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+}
+
+.title-academica, .title-laboral{
+  font-size: 1.3rem;
+  margin-bottom: 0.34rem;
+}
+
+.date{
+  display: block;
+  color: var(--third-color);
+  margin-bottom: 0.3rem;
+}
+.item p{
+  line-height: 1.25rem;
+  font-weight: 550;
+}
+.item.izq{ /*color a los bordes*/
+  border-right: 0.8rem solid var(--third-color);
+  margin-right: 1.25rem;
+  width: 90%;
+}
+.item.der{
+  border-left: 0.8rem solid var(--fourth-color);
+  margin-left: 1.25rem;
+  width: 90%;
+}
+#Carrusel{
+  padding-top: 3.5rem;
+}
+
+/********** Mobile experiencia ***************/
+@media(max-width: 768px){
+.experience-title{
+  font-size:2.6rem;
+}
+.subtitle{
+  font-size: 1.6rem;
+  padding-bottom: 1rem;
+  margin-bottom: 0.625rem;
+}
+.experience .fila{ /*bajo  columna laboral*/
+  display: block;
+}
+.col{
+  width: 100%;
+}
+.col.izquierda{
+  padding-top: 1.5rem;
+}
+.title-academica, .title-laboral{
+  font-size: 1.2rem;
+}
+.date{
+  font-size: 1rem;
+}
+.item p{
+  font-size: 0.9rem;
+}
+#Carrusel{
+  padding: 1.8rem 0 0 0;
+}}
