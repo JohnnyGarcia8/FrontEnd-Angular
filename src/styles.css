@@ -29,6 +29,12 @@ body {
   padding-top: 4.38rem;
   color: var(--text-color1);
 }
+#Banner{
+  background-image:url(../../../../../assets/img/Foto-banner.jpg);
+  background-position: top;
+  margin:auto;
+  background-repeat: no-repeat;
+}
 
 /***** encuadre (padding) desk ********/
 .horizontal-padding {

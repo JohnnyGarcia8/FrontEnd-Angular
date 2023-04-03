@@ -8,7 +8,6 @@ import { ErrorComponent } from './Components/Error/error.component';
 import { InicioComponent } from './Components/Pagina-Main/inicio/inicio.component';
 import { NavbarComponent } from './Components/Pagina-Main/Secciones/navbar/navbar.component';
 import { LoginComponent } from './Components/Pagina-Main/Secciones/navbar/login/login.component';
-import { BannerComponent } from './Components/Pagina-Main/Secciones/banner/banner.component';
 import { AcercadeComponent } from './Components/Pagina-Main/Secciones/perfil/acercade.component';
 import { ExperienciaComponent } from './Components/Pagina-Main/Secciones/experiencias/experiencia.component';
 import { HabilidadesComponent } from './Components/Pagina-Main/Secciones/habilidades/habilidades.component';
@@ -41,7 +40,6 @@ import { DhFooterComponent } from './Components/Dashboard/Dh-secciones/dh-footer
     InicioComponent,
     NavbarComponent,
     LoginComponent,
-    BannerComponent,
     AcercadeComponent,
     ExperienciaComponent,
     HabilidadesComponent,
