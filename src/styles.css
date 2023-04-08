@@ -26,14 +26,8 @@ section[id] {
 
 body { 
   background-color: #c9e5f6;
-  padding-top: 4.38rem;
+  padding-top: 2rem;
   color: var(--text-color1);
-}
-#Banner{
-  background-image:url(../../../../../assets/img/Foto-banner.jpg);
-  background-position: top;
-  margin:auto;
-  background-repeat: no-repeat;
 }
 
 /***** encuadre (padding) desk ********/
@@ -55,4 +49,40 @@ body {
 .vertical-padding {
   padding-top: 1.56rem;
   padding-bottom: 1.4rem;
+}}
+
+
+/***********  BOTONES EDITAR/ELIMINAR  *************/
+#bannerBtn{
+  margin-top: 1rem;
+  display: flex;
+  text-align: center;
+}
+.btn.pencil, .btn.trash{
+  color:var(--text-color2);
+  list-style: none;
+}
+.btn.pencil:hover, .btn.trash:hover{
+  color:red;
+}
+label.form-group{
+  font-size: 1.25rem;
+}
+.btn-close{
+  font-size: 1.3rem;
+}
+.form-control{
+  border-color:skyblue;
+}
+/**************** MODALES **************************/
+.modal{
+  color: var(--text-color2); /*color negro para las letras de todos los modales*/
+}
+.contact, #botones-contacto{
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+.modal.fade{
+  width: 97%;
 }}

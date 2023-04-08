@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./acercade.component.css']
 })
 export class AcercadeComponent {
-
+onEdition:boolean=true;
 }

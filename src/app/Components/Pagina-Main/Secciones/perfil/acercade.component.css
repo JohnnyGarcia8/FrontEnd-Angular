@@ -1,4 +1,14 @@
-
+header{
+ min-height: 100vh;
+ max-width: 100% ;
+}
+#banner{
+  background-image: url(../../../../../assets/img/Foto-banner.jpg); /*Banner*/
+ 
+  margin:auto;
+  background-repeat: no-repeat;
+  background-size: cover ;
+}
 #perfil{
   padding-top: 1.2rem;
   padding-bottom: 2.2rem;

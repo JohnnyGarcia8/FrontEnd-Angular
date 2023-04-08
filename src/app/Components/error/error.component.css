@@ -1,6 +1,4 @@
-body{
-    font-family: 'Poppins',sans-serif;
-}
+
 #error-img{
     width: 50%;
 }
@@ -13,7 +11,8 @@ body{
     justify-content: center;
 }
 .descrip-error{
-    color: #000;
+    font-family: 'Poppins',sans-serif;
+    color:var(--text-color2);
     font-size: 1.7rem;
     font-weight: bold;
     padding: 1.25rem;
@@ -24,7 +23,7 @@ button{
     border-radius: 1rem;
     border: none;
     background: #0581f5;
-    color: #ffffff;
+    color: var(--text-color1);
 }
 
 

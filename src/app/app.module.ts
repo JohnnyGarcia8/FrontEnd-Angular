@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+import { FormsModule } from '@angular/forms'; /* importo forms de angular*/
 
 import { AppComponent } from './app.component';
 import { ErrorComponent } from './Components/Error/error.component';
@@ -16,15 +17,13 @@ import { ContactoComponent } from './Components/Pagina-Main/Secciones/contacto/c
 import { FooterComponent } from './Components/Pagina-Main/Secciones/footer/footer.component';
 
 
-import { DashboardComponent } from './Components/Dashboard/dashboard/dashboard.component';
-import { DhNavbarComponent } from './Components/Dashboard/Dh-secciones/dh-navbar/dh-navbar.component';
-import { DhBannerComponent } from './Components/Dashboard/Dh-secciones/dh-banner/dh-banner.component';
-import { DhPerfilComponent } from './Components/Dashboard/Dh-secciones/dh-perfil/dh-perfil.component';
-import { DhExperienciasComponent } from './Components/Dashboard/Dh-secciones/dh-experiencias/dh-experiencias.component';
-import { DhHabilidadesComponent } from './Components/Dashboard/Dh-secciones/dh-habilidades/dh-habilidades.component';
-import { DhProyectosComponent } from './Components/Dashboard/Dh-secciones/dh-proyectos/dh-proyectos.component';
-import { DhContactoComponent } from './Components/Dashboard/Dh-secciones/dh-contacto/dh-contacto.component';
-import { DhFooterComponent } from './Components/Dashboard/Dh-secciones/dh-footer/dh-footer.component';
+
+
+
+
+
+
+
 
 
 
@@ -46,22 +45,15 @@ import { DhFooterComponent } from './Components/Dashboard/Dh-secciones/dh-footer
     ProyectosComponent,
     ContactoComponent,
     FooterComponent,
+
   
-    DashboardComponent,
-    DhNavbarComponent,
-    DhBannerComponent,
-    DhPerfilComponent,
-    DhExperienciasComponent,
-    DhHabilidadesComponent,
-    DhProyectosComponent,
-    DhContactoComponent,
-    DhFooterComponent,
-    
+   
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
+    FormsModule,
   ],
 
   providers: [],
