@@ -1,130 +1,130 @@
 
+/*************************** CONTACTO *******************************/
 /************* Contacto Mobile *******************/
 .contact {
-    background-color: var(--primary-color);
-    color: var(--text-color1);
-    border-radius: 1rem;
-    padding: 1.56rem;
-  
-    display: grid; /*genero una cuadrícula con filas, items, columnas*/
-    gap: 1.7rem; /*ancho de la separacion por fila o columna*/
-    font-family:'Poppins', sans-serif;
-  }
-  
-  .contact p, .contact-title {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  
-  .contact-title {
-    font-size: 1.9rem;
-    font-weight: 500;
-    text-transform: uppercase;
-    text-align: center;
-  }
-  
-  .contact-details, .contact-form {
-    display: grid;
-    gap: 1.25rem;
-  }
-  
-  .contact-details-group, .contact-form-group {
-    display: grid; /*cuadrícula interna*/
-    gap: 0.2rem; /*espacio entre los elementos hijos*/
-  }
-  
-  .contact-label {
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 1rem;
-  }
-  .contact-text {
-    font-size: 0.9rem;
-  }
-  
-  .contact-form input, .contact-form textarea {
-    border-radius: 0.4rem;
-    border: none;
-    height: 1.87rem;
-    padding: 0.3rem 0.6rem;
-  }
-  .contact-form textarea {
-    height: auto;
-    resize: vertical; /*permite cambiar el tamaño del elemento solo verticalmente*/
-  }
-  
-  .contact-form-submit {
-    width: 100%;
-    height: 3.125rem;
-    background-color:var(--text-color2);
-    border-radius: 0.44rem;
-    color: var(--text-color1);
-    border: 1px solid var(--text-color1);
-  }
-  
-  .redes {
-    list-style: none;
-    display: flex;
-    gap: 1.56rem;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .list-group{ /*oculto color de fondo y borde en iconos*/
-    --bs-list-group-bg:none;
-    --bs-list-group-border-color:none;
-  }
-  
-  /************* Contacto Desk *******************/
-  @media (min-width: 768px) {
-  .contact {
-    padding: 4.37rem;
-    max-width: 1000px;
-    margin: 0 auto;
-    box-sizing: border-box;
-  }
-  .contact-title {
-    font-size: 2.7rem;
-    grid-area: title; /*utilizo area para darle un tamaño y una ubicacion */
-  }
-  .contact-label {
-    font-size: 1.3rem;
-  }
-  .contact-text {
-    font-size: 1rem;
-  }
-  .contact-form-submit{
-    font-size: 1.3rem;
-  }
-  .contact-details {
-    grid-area: details;
-  }
-  .contact-form {
-    grid-area: form;
-    font-size: 1.1rem;
-  }
-  .contact {
-    grid: /*ubico cada elemento definido por grid-area en filas y columnas*/
-          "title   form" auto
-          "details form" auto
-          "social  form" auto /
-          1fr      1fr; /*ambas columbas con mismo tamaño*/
-  }                     /*(1fr) ocupa una parte de una fila entera*/
-  .contact-form-submit:hover {
-    box-shadow: 0 0 14px var(--nav-footer-color);
-  }
-  i.fa-brands.fa-linkedin-in.fa-2xl:hover{
-    color: #1e90ff;
-  }
-  i.fa-regular.fa-envelope.fa-2xl:hover{
-    color: #c65d37;
-  }
-  i.fa-brands.fa-github.fa-2xl:hover{
-    color:#f0ffff;
-  }
-  .contact p,
-  .contact h2 {
-    margin: 0.3rem;
-    padding: 0.2rem;
-  }}
+  background-color: var(--primary-color);
+  color: var(--text-color1);
+  border-radius: 1rem;
+  padding: 1.56rem;
+
+  display: grid; /*genero una cuadrícula con filas, items, columnas*/
+  gap: 1.7rem; /*ancho de la separacion por fila o columna*/
+  font-family:'Poppins', sans-serif;
+}
+
+.contact p, .contact-title {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 1.9rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.contact-details, .contact-form {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.contact-details-group, .contact-form-group {
+  display: grid; /*cuadrícula interna*/
+  gap: 0.2rem; /*espacio entre los elementos hijos*/
+}
+
+.contact-label {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1rem;
+}
+.contact-text {
+  font-size: 0.9rem;
+}
+
+.contact-form input, .contact-form textarea {
+  border-radius: 0.4rem;
+  height: 1.87rem;
+  padding: 0.3rem 0.6rem;
+  border-color: skyblue;
+}
+.contact-form textarea {
+  height: auto;
+  resize: vertical; /*permite cambiar el tamaño del elemento solo verticalmente*/
+}
+
+.contact-form-submit {
+  width: 100%;
+  height: 3.125rem;
+  background-color:var(--text-color2);
+  border-radius: 0.44rem;
+  color: var(--text-color1);
+  border: 1px solid var(--text-color1);
+}
+
+.redes {
+  list-style: none;
+  display: flex;
+  gap: 1.56rem;
+  justify-content: center;
+  align-items: center;
+}
+.list-group{ /*oculto color de fondo y borde en iconos*/
+  --bs-list-group-bg:none;
+  --bs-list-group-border-color:none;
+}
+
+/************* Contacto Desk *******************/
+@media (min-width: 768px) {
+.contact {
+  padding: 4.37rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.contact-title {
+  font-size: 2.7rem;
+  grid-area: title; /*utilizo area para darle un tamaño y una ubicacion */
+}
+.contact-label {
+  font-size: 1.3rem;
+}
+.contact-text {
+  font-size: 1rem;
+}
+.contact-form-submit{
+  font-size: 1.3rem;
+}
+.contact-details {
+  grid-area: details;
+}
+.contact-form {
+  grid-area: form;
+  font-size: 1.1rem;
+}
+.contact {
+  grid: /*ubico cada elemento definido por grid-area en filas y columnas*/
+        "title   form" auto
+        "details form" auto
+        "social  form" auto /
+        1fr      1fr; /*ambas columbas con mismo tamaño*/
+}                     /*(1fr) ocupa una parte de una fila entera*/
+.contact-form-submit:hover {
+  box-shadow: 0 0 14px var(--nav-footer-color);
+}
+i.fa-brands.fa-linkedin-in.fa-2xl:hover{
+  color: #1e90ff;
+}
+i.fa-regular.fa-envelope.fa-2xl:hover{
+  color: #c65d37;
+}
+i.fa-brands.fa-github.fa-2xl:hover{
+  color:#f0ffff;
+}
+.contact p,
+.contact h2 {
+  margin: 0.3rem;
+  padding: 0.2rem;
+}}

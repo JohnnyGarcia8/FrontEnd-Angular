@@ -14,7 +14,7 @@
         satisfaga las necesidades de los clientes y usuarios finales por igual.
       </p>
      <!--Boton editar Acerca de mi -->
-     <div class="col" *ngIf="onEdition"> <!-- utilizo ngIf para mostrar u ocultar un elemento HTML (en la pag que ve el usuario) en función de una condición-->
+     <div class="col" *ngIf="onEdition"> <!-- utilizo ngIf para ocultar y luego mostar un elemento HTML en la pag que ve el usuario (en este caso todo lo que contiene los botones de edicion) en función de una condición a cumplir-->
       <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#acercadeModal">	
         <i class="fa-solid fa-pencil"></i>
       </button>
@@ -51,7 +51,7 @@
       <!-- Casilla-Boton CV-->	
       <button class="profile-btn-cv">Descargar cv</button>
       <!--Botones editar/eliminar-->
-     <div class="col" *ngIf="onEdition">	
+     <div class="col" *ngIf="onEdition"> <!-- este onEdition se lo aplico a todas las secciones y sus respectivos editables-->	
       <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#BtnCvModal">	
         <i class="fa-solid fa-pencil"></i>
       </button>

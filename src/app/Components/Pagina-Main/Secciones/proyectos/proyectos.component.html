@@ -1,35 +1,89 @@
-
-<div class="horizontal-padding vertical-padding">  
-  <section class="project" id="proyectos">
-    <div class="project-body">
-    <div class="container text-center">
-      <div class="position-relative d-flex align-items-center justify-content-center"> <!--propiedades-->
-        <h1 class="project-title" style="-webkit-text-stroke: 2px #4ab7df;">Proyectos</h1>
-      </div>
-      <div class="projects">
-      <h3 class="project-subtitle">Calculadora</h3>
-      <span class="project-date">Noviembre 2022</span>
-      <span class="project-img-section">
-        <img class="img-fluid" src="../../../../assets/img/Calculadora.png" alt="Calculadora">
-      </span>
-      <h5 class="project-description"> Contiene botones funcionales que nos permiten realizar cálculos 
-        aritméticos (suma, resta, multiplicación y división) además de un botón (C) para eliminar el cálculo en curso. 
-      </h5>
-    </div>
-      <div class="projects">
-        <h3 class="project-subtitle">Portfolio Web</h3>
-        <span class="project-date">Octubre 2022 - Mayo 2023</span>
+   <!------------------- Proyectos ---------------------->
+   <div class="horizontal-padding vertical-padding">  
+    <section class="project" id="proyectos">
+      <div class="project-body">
+      <div class="container text-center">
+        <div class="position-relative d-flex align-items-center justify-content-center"> <!--propiedades-->
+          <h1 class="project-title" style="-webkit-text-stroke: 2px #4ab7df;">Proyectos</h1>
+        </div>
+        <div class="projects">
+        <h3 class="project-subtitle">Calculadora</h3>
+        <span class="project-date">Noviembre 2022</span>
         <span class="project-img-section">
-          <img class="img-fluid" src="../../../../assets/img/Img-Portfolio.png" alt="Porfolio Web">
+          <img class="img-fluid" src="../../../../assets/img/Calculadora.png" alt="Calculadora">
         </span>
-        <h5 class="project-description">Este proyecto fue realizado durante la cursada de Argentina Programa 
-          como Desarrolador full stack. Creado desde cero a partir de tecnologias tales como: Html, Css, Javascript y 
-          Angular por parte de FrontEnd seguido de MySql, Java y ... por parte de BackEnd.</h5>
-      </div>  
+        <h5 class="project-description"> Contiene botones funcionales que nos permiten realizar cálculos 
+          aritméticos (suma, resta, multiplicación y división) además de un botón (C) para eliminar el cálculo en curso. 
+        </h5>
+   <!---Boton editar/eliminar proyectos 1 --->
+     <div class="col pb-3 mb-1" *ngIf="onEdition">
+       <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#proyectosModal">	
+         <i class="fa-solid fa-pencil"></i>
+       </button>
+       <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+         <li><i class="fa-solid fa-trash"></i></li>
+       </button>
+   <!-- Modal Proyectos -->	
+        <div class="modal fade modal-lg" id="proyectosModal" tabindex="-1" aria-labelledby="proyectosModalLabel" aria-hidden="true">	
+          <div class="modal-dialog modal-content">
+            <div class="modal-header">
+             <h3 class="modal-title w-100 text-center">Proyectos </h3>	 
+             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pb-0">
+             <div class="mb-3">
+               <label class="form-group pb-2">Título </label>
+               <div class="col-sm-12">
+                 <input type="text" class="form-control">
+               </div>
+             </div>
+             <div class="mb-3">
+               <label class="form-group pb-2">Fecha </label>
+               <div class="col-sm-12">
+                 <input type="text" class="form-control">
+               </div>
+             </div>
+             <div class="mb-3">
+               <label class="form-group pb-2">Nueva imagen</label>	
+             <div class="col-sm-12">
+               <input class="form-control" type="file" id="formFile">
+             </div>
+            </div>
+             <div class="mb-3">
+               <label class="form-group pb-1">Descripción</label>
+               <textarea class="form-control" rows="3"></textarea>
+             </div>
+             </div>
+           <div class="modal-footer">
+             <button type="button" class="btn btn-primary">Guardar</button>
+           </div>
+         </div>
+       </div>
       </div>
-    </div>
-  </section>
-</div> 
+     </div>
+        <div class="projects">
+          <h3 class="project-subtitle">Portfolio Web</h3>
+          <span class="project-date">Octubre 2022 - Mayo 2023</span>
+          <span class="project-img-section">
+            <img class="img-fluid" src="../../../../assets/img/Img-Portfolio.png"  alt="Porfolio Web">
+          </span>
+          <h5 class="project-description">Este proyecto fue realizado durante la cursada de Argentina Programa 
+            como Desarrolador full stack. Creado desde cero a partir de tecnologias tales como: Html, Css, Javascript y 
+            Angular por parte de FrontEnd seguido de MySql, Java y ... por parte de BackEnd.</h5>
+   <!---Boton editar/eliminar proyectos 2 --->
+            <div class="col" *ngIf="onEdition">
+              <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#proyectosModal">	
+                <i class="fa-solid fa-pencil"></i>
+              </button>
+              <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+                <li><i class="fa-solid fa-trash"></i></li>
+              </button>
+            </div>  
+          </div>
+        </div>
+      </div>
+    </section>
+  </div> 
 
 
    

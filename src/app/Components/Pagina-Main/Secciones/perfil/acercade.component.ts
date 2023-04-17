@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LoginServiceService } from 'src/app/servicio/login-service.service'; /* importo Login service para poder hacer uso de sus funciones */
 
 @Component({
   selector: 'app-acercade',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./acercade.component.css']
 })
 export class AcercadeComponent {
-onEdition:boolean=true;
+  constructor(public loginService:LoginServiceService){ 
+  }
+  onEdition:boolean=false; /* los botones estan ocultos por defecto (en todas las secciones) */
+
+  ngOnInit(){ /*actualiza la propiedad onEdition del componente cada vez que el valor del observable cambia */
+    this.loginService.observableEdit.subscribe(respuesta=>{this.onEdition=respuesta})
+  }
+
 }

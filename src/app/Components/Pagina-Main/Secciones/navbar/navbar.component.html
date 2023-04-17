@@ -20,14 +20,14 @@
        <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
        <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
        
-<!--Boton USER-->
-        <li class="btn">
+<!--Boton USER entrar-->
+        <li class="btn" *ngIf="!onLogged">
           <i class="fa-solid fa-user-lock fa-2xl" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"></i>
         </li>
         <!--Boton salir de USER-->
-<li class="btn" *ngIf="onoutLog">
-  <i class="fa-solid fa-arrow-right-from-bracket fa-2xl" type="button"></i>
- </li>
+        <li class="btn" *ngIf="onLogged" (click)="outLog()"> <!--Boton de cerrar sesion se habilita si se cumple la condicion-->
+          <i class="fa-solid fa-arrow-right-from-bracket fa-2xl" type="button"></i>
+         </li>
       </ul>
     </div>
   </nav>

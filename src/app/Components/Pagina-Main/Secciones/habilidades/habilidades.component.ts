@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LoginServiceService } from 'src/app/servicio/login-service.service';
 
 @Component({
   selector: 'app-habilidades',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./habilidades.component.css']
 })
 export class HabilidadesComponent {
+  constructor(public loginService:LoginServiceService){ 
+  }
+  onEdition:boolean=false;
+
+  ngOnInit(){
+    this.loginService.observableEdit.subscribe(respuesta=>{this.onEdition=respuesta})
+  }
 
 }

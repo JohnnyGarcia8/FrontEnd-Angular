@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LoginServiceService } from 'src/app/servicio/login-service.service';
 
 @Component({
   selector: 'app-proyectos',
@@ -6,5 +7,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./proyectos.component.css']
 })
 export class ProyectosComponent {
+  constructor(public loginService:LoginServiceService){ 
+  }
+  onEdition:boolean=false;
+
+  ngOnInit(){
+    this.loginService.observableEdit.subscribe(respuesta=>{this.onEdition=respuesta})
+  }
 
 }

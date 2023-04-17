@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { LoginServiceService } from 'src/app/servicio/login-service.service';
 
 @Component({
   selector: 'app-navbar',
@@ -6,7 +7,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent {
+  constructor(public loginService:LoginServiceService){ 
+  }
+  onLogged:boolean=false; /*declaro dos propiedades onLogged: que es logueado y que da lugar a los editable(onEdition)*/
+  onEdition:boolean=false;
 
-  onoutLog:boolean=false;
+  ngOnInit(){ /*se ejecuta una vez que la clase ha sido iniciada*/
+    this.loginService.observableOnLogged.subscribe(respuesta=>{this.onLogged=respuesta}) /*el observable avisa a la clase cuando cambia el estado de inicio de sesión y va a actualizar la propiedad "onLogged" (esta sincronizado con el servicio) */
+  }
+  
+  outLog(){ /*cierra sesión de usuario*/
+    this.loginService.logged(false); /*cambia el estado de inicio de sesión del usuario en el servicio */
+    this.loginService.out(false);/*cambia el estado de cierre de sesión*/
+  }
 
 }

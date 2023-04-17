@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms'; /* importo forms de angular*/
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; /* importo forms de angular*/
 
 import { AppComponent } from './app.component';
 import { ErrorComponent } from './Components/Error/error.component';
@@ -17,12 +17,7 @@ import { ContactoComponent } from './Components/Pagina-Main/Secciones/contacto/c
 import { FooterComponent } from './Components/Pagina-Main/Secciones/footer/footer.component';
 
 
-
-
-
-
-
-
+import { LoginServiceService } from './servicio/login-service.service';
 
 
 
@@ -45,18 +40,16 @@ import { FooterComponent } from './Components/Pagina-Main/Secciones/footer/foote
     ProyectosComponent,
     ContactoComponent,
     FooterComponent,
-
-  
-   
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule, /*formcrontol formgroup*/
   ],
 
-  providers: [],
+  providers: [LoginServiceService],
   bootstrap: [AppComponent]
 
 })
