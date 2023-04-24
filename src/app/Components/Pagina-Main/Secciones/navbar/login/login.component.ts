@@ -12,7 +12,7 @@ export class LoginComponent {
   constructor(public loginService:LoginServiceService){ /*creo un login simple solo de prueba, que al ser logueados te muestra los botones de edicion*/
 
   }
-  clave:string="12johnny34";
+  clave:string="1234";
   usuario:string="usuario";
 
   addLogin=new FormGroup({ /*especifica los controles (usuario y clave) que estarán dentro del formulario*/

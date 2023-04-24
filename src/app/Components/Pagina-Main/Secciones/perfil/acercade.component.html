@@ -55,9 +55,26 @@
       <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#BtnCvModal">	
         <i class="fa-solid fa-pencil"></i>
       </button>
-      <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="">	
+      <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">	
         <i class="fa-solid fa-trash"></i>
       </button>
+      <!-- Modal ELIMINAR-->  <!--coloco el modal una vez y lo llamo mediante su boton donde sea necesario--> 
+      <div class="modal fade" id="eliminar-Modal" tabindex="-1" aria-labelledby="eliminar-ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title w-100 text-center">ATENCIÓN</h3>	 
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>		
+          <div class="modal-body">
+            <div class="mb-1">
+              <label class="form-group pb-2">¿Desea eliminar este elemento?</label>	
+            </div>
+          </div>
+          <div class="modal-footer pb-1 pt-1">
+          <button type="button" class="btn btn-primary">Eliminar</button>
+        </div>
+       </div>
+     </div>
       <!-- Modal CV-->
      <div class="modal fade" id="BtnCvModal" tabindex="-1" aria-labelledby="BtnCvModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-content">

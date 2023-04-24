@@ -50,20 +50,24 @@ body {
   padding-top: 1.56rem;
   padding-bottom: 1.4rem;
 }}
-
-
 /***********  BOTONES EDITAR/ELIMINAR  *************/
 #bannerBtn{
   margin-top: 1rem;
   display: flex;
   text-align: center;
 }
-.btn.pencil, .btn.trash{
+.btn.pencil, .btn.trash, .btn.agregar{
   color:var(--text-color2);
   list-style: none;
 }
-.btn.pencil:hover, .btn.trash:hover{
-  color:red;
+.btn.pencil:hover{
+  color:greenyellow;
+}
+.btn.trash:hover{
+  color: red;
+}
+.btn.agregar:hover{
+  color:#56dfe7;
 }
 label.form-group{
   font-size: 1.25rem;
@@ -77,6 +81,7 @@ label.form-group{
 /**************** MODALES **************************/
 .modal{
   color: var(--text-color2); /*color negro para las letras de todos los modales*/
+  font-family:'Poppins', sans-serif;
 }
 .contact, #botones-contacto{
   text-align: center;
