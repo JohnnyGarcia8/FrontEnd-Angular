@@ -46,7 +46,7 @@ import { LoginServiceService } from './servicio/login-service.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule, /*formcrontol formgroup*/
+    ReactiveFormsModule, /*formcontrol - formgroup*/
   ],
 
   providers: [LoginServiceService],

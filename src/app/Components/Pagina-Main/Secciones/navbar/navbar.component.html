@@ -7,18 +7,18 @@
          <img src="../../../assets/img/Logo ARGPrograma negro" alt="Logo distintivo">
         </a>
       </div>
-      <button class="open-menu" aria-label="Abrir menú">
+      <button class="open-menu" (click)="menu=true">
         <i class="fa-solid fa-bars fa-2xl"></i>
       </button>
-      <ul class="menu nav">
-        <button class="close-menu" aria-label="Cerrar menú">
+      <ul class="menu nav" [ngClass]="menu? 'menu_opened':'' "> <!--verifica la condicion y crea la clase dependiendo de la respuesta-->
+        <button class="close-menu" (click)="menu=false">
           <i class="fa-solid fa-arrow-left fa-2xl"></i>
         </button>
-       <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Perfil</a></li>
-       <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
-       <li class="nav-item"><a class="nav-link" href="#skills">Habilidades</a></li>
-       <li class="nav-item"><a class="nav-link" href="#proyectos">Proyectos</a></li>
-       <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+       <li class="nav-item"><a class="nav-link active" aria-current="page" href="#" (mouseup)="menu=false">Perfil</a></li>
+       <li class="nav-item"><a class="nav-link" href="#experiencia" (mouseup)="menu=false" >Experiencia</a></li> <!--evento que ocurre luego del click, es decir que cierra menu despde hacer click e ir a una seccion-->
+       <li class="nav-item"><a class="nav-link" href="#skills" (mouseup)="menu=false">Habilidades</a></li>
+       <li class="nav-item"><a class="nav-link" href="#proyectos" (mouseup)="menu=false">Proyectos</a></li>
+       <li class="nav-item"><a class="nav-link" href="#contacto" (mouseup)="menu=false">Contacto</a></li>
        
 <!--Boton USER entrar-->
         <li class="btn" *ngIf="!onLogged">

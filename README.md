@@ -1,27 +1,41 @@
-# MiPrimerApp
+# Portfolio Web
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.0.4.
+## ¡Bienvenidos! 
+Les explicaré  como lleve a cabo mi porfolio web.
 
-## Development server
+###  Maquetado dinámico
+Este proyecto se generó con Angular CLI versión 15.0.4.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+### Desarrollo 
+ - Realizado en framework Angular para hacer uso de sus ventajas como lo es la separación de responsabilidades, la modularidad, el testing,el mantenimiento y la escalabilidad del proyecto.
+ - Haciendo uso de componentes dividí mi proyecto en partes obteniendo una reutilización de código y una mayor organización gracias a su patrón MVC (Modelo-Vista-Controlador).
+  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+#### Este sitio web fue construido utilizando las siguientes tecnologías:
+- Angular
+- TypeScript
+- Bootstrap
+- Fontawesome
+- Git 
+- Git-Hub
 
-## Build
+### Instalación
+Para ejecutar este sitio web en su máquina local, siga estos pasos:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+1. Clone este repositorio en su máquina local usando git clone mediante el siguiente link https://github.com/JohnnyGarcia8/FrontEnd-Angular.
+2.  Abra la carpeta Clase Angular/mi-primer-app en Visual studio Code.
+3.Ya puede utilizar y modificar el codigo a su gusto.
+### Uso
+1. Inicie el servidor local con el comando ng serve en consola.
+2. Acceda al siguiente enlace http://localhost:4200.
+3. Ya podrá ver sus modificaciones en tiempo real.
 
-## Running unit tests
+------------
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Autor
+Nombre: Jonathan García
 
-## Running end-to-end tests
+Correo electrónico: jonibgarcia@gmail.com
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+**¡Gracias por visitar mi portfolio web!**
