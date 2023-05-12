@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginServiceService } from 'src/app/servicio/login-service.service'; /* importo Login service para poder hacer uso de sus funciones */
+import { LoginServiceService } from 'src/assets/services/servicio/login-service.service'; /* importo Login service para poder hacer uso de sus funciones */
 
 @Component({
   selector: 'app-acercade',

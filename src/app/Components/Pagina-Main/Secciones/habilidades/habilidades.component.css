@@ -14,7 +14,10 @@
 .col-md-6{
   padding: 4rem;
 }
-
+.tecnologia, .porcentaje{
+  padding-bottom: 0.5rem;
+  padding-top: 0.7rem;
+}
 .tecnologia, .porcentaje {
   font-family:'Poppins', sans-serif;
   font-size: 1.5rem;
@@ -36,14 +39,20 @@
   animation: Aumentar 2.5s ease-in-out; /*empieza lento, acelera en el medio y termina lento*/
 }
 
-#html{
+#Html{
   background-color: #eb8724;
 }
-#css{
+#Css{
   background-color: #0BCEAF;
 }
-#javascript{
+#Javascript{
   background-color: #f9f912;
+}
+#GitHub{
+  background-color: #8041a1;
+}
+#SpringBoot{
+  background-color: #3eb244;
 }
 
 @keyframes Aumentar{

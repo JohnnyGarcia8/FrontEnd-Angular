@@ -17,7 +17,7 @@ import { ContactoComponent } from './Components/Pagina-Main/Secciones/contacto/c
 import { FooterComponent } from './Components/Pagina-Main/Secciones/footer/footer.component';
 
 
-import { LoginServiceService } from './servicio/login-service.service';
+import { LoginServiceService } from '../assets/services/servicio/login-service.service';
 
 
 

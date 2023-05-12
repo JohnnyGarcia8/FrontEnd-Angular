@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoginServiceService } from 'src/app/servicio/login-service.service';
+import { LoginServiceService } from 'src/assets/services/servicio/login-service.service';
 
 @Component({
   selector: 'app-experiencia',
