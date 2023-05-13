@@ -18,6 +18,7 @@ import { FooterComponent } from './Components/Pagina-Main/Secciones/footer/foote
 
 
 import { LoginServiceService } from '../assets/services/servicio/login-service.service';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -47,6 +48,7 @@ import { LoginServiceService } from '../assets/services/servicio/login-service.s
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule, /*formcontrol - formgroup*/
+    HttpClientModule,
   ],
 
   providers: [LoginServiceService],
