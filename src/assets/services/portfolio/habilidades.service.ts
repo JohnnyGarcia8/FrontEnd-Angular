@@ -10,7 +10,7 @@ export class HabilidadesService {
 
   constructor(private http:HttpClient) { }
 
-  private url = 'http://localhost:8080/habilidades';
+  private url = 'https://jonathan-garcia.onrender.com/habilidades';
 
   
   getHabilidades(): Observable<Habilidades[]> {

@@ -14,7 +14,7 @@ export class ContactoService {
 
   constructor(private http:HttpClient) { }
 
-  private url = 'http://localhost:8080/contacto';
+  private url = 'https://jonathan-garcia.onrender.com/contacto';
 
   
   getContacto(): Observable<Contacto[]> {

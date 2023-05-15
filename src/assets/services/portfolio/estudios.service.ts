@@ -10,7 +10,7 @@ export class EstudiosService {
 
   constructor(private http:HttpClient) { }
 
-  private url = 'http://localhost:8080/estudios';
+  private url = 'https://jonathan-garcia.onrender.com/estudios';
 
   
   getEstudios(): Observable<Estudios[]> {

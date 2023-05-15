@@ -10,7 +10,7 @@ export class PersonaPerfilService {
 
   constructor(private http:HttpClient) { }
 
-  private url = 'http://localhost:8080/personaperfil';
+  private url = 'https://jonathan-garcia.onrender.com/personaperfil';
 
   
   getPersonaPerfil(): Observable<PersonaPerfil[]> {
@@ -25,7 +25,7 @@ export class PersonaPerfilService {
     return this.http.post<PersonaPerfil>(this.url + '/crear', data);
   }
 
-  putPersonaPerfil(id: number, data: Object): Observable<PersonaPerfil> {
+  putPersonaPerfil(id: number | undefined, data: Object): Observable<PersonaPerfil> {
     return this.http.put<PersonaPerfil>(this.url + '/editar/' + id, data);
   }
 

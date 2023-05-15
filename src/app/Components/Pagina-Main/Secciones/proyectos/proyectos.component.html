@@ -45,15 +45,15 @@
              </div>
            </div>
         </div>
-        <div class="projects">
-        <h3 class="project-subtitle">Calculadora</h3>
-        <span class="project-date">Noviembre 2022</span>
+
+<!--------------------------------- PROYECTO 1 ------------------------------------------->
+        <div class="projects" *ngFor="let proyec of proyectos">
+        <h3 class="project-subtitle">{{proyec.title_proyecto}}</h3>
+        <span class="project-date">{{proyec.fecha_inicio + ' - ' + proyec.fecha_fin}}</span>
         <span class="project-img-section">
-          <img class="img-fluid" src="../../../../assets/img/Calculadora.png" alt="Calculadora">
+          <img class="img-fluid" src="proyec.img_proyecto" alt="{{proyec.title_proyecto}}">
         </span>
-        <h5 class="project-description"> Contiene botones funcionales que nos permiten realizar cálculos 
-          aritméticos (suma, resta, multiplicación y división) además de un botón (C) para eliminar el cálculo en curso. 
-        </h5>
+        <h5 class="project-description">{{proyec.descripcion}}</h5>
    <!---Boton editar/eliminar proyectos 1 --->
      <div class="col pb-3 mb-1" *ngIf="onEdition">
        <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#proyectosModal">	
@@ -100,25 +100,8 @@
        </div>
       </div>
      </div>
-        <div class="projects">
-          <h3 class="project-subtitle">Portfolio Web</h3>
-          <span class="project-date">Octubre 2022 - Mayo 2023</span>
-          <span class="project-img-section">
-            <img class="img-fluid" src="../../../../assets/img/Img-Portfolio.png"  alt="Porfolio Web">
-          </span>
-          <h5 class="project-description">Este proyecto fue realizado durante la cursada de Argentina Programa 
-            como Desarrolador full stack. Creado desde cero a partir de tecnologias tales como: Html, Css, Javascript y 
-            Angular por parte de FrontEnd seguido de MySql, Java, NetBeans, Spring Boot, FireBase, Render y Clever Cloud entre otras por parte de BackEnd.</h5>
-   <!---Boton editar/eliminar proyectos 2 --->
-            <div class="col" *ngIf="onEdition">
-              <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#proyectosModal">	
-                <i class="fa-solid fa-pencil"></i>
-              </button>
-              <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">	
-                <li><i class="fa-solid fa-trash"></i></li>
-              </button>
-            </div>  
-          </div>
+
+  <!------------------------------- PROYECTO 2 ------------------------------------------->
         </div>
       </div>
     </section>

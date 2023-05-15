@@ -39,15 +39,15 @@
         </div>
         
       <div class="row align-items-center">
-      <div class="col-md-6"> <!-- md(medium) resolucion de pantalla  ≥768px -->
+      <div class="col-md-6" *ngFor="let skills of habilidades"> <!-- md(medium) resolucion de pantalla  ≥768px -->
  <!------- Barra HTML ------->
       <div class="skill mb-4"> <!--(margin-bottom-4) = (propiedad-lado-espacio)-->
         <div class="d-flex justify-content-between">
-          <h6 class="tecnologia" >HTML</h6>  
-          <h6 class="porcentaje">85%</h6>
+          <h6 class="tecnologia">{{skills.tecnologia}}</h6>  
+          <h6 class="porcentaje">{{skills.porcentaje}}%</h6>
         </div>
         <div class="progress"> <!--elemento indicador de progreso sacado de bootstrap-->
-         <div class="progress-bar" id="Html" role="progressbar" style="--w:85%"></div> <!-- defino la variable --w (=width) que me proporciona en cuanto se expande el progress-->
+         <div class="progress-bar" id="Html" role="progressbar" [style.width.%]="skills.porcentaje"></div>
         </div>
    <!--Botones editar/eliminar-->
        <div class="col" *ngIf="onEdition"> 
@@ -87,75 +87,18 @@
      </div>
    </div>
   </div>
- <!------ Barra CSS --------->
-      <div class="skill mb-4">
-        <div class="d-flex justify-content-between">
-          <h6 class="tecnologia">CSS</h6>
-          <h6 class="porcentaje">85%</h6>
-        </div>
-        <div class="progress">
-          <div class="progress-bar bg-primary" id="Css" role="progressbar" style="--w:85%;"></div>
-        </div>
-   <!--Botones editar/eliminar-->
-         <div class="col" *ngIf="onEdition">
-           <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#skillsBtnModal">	
-           <li><i class="fa-solid fa-pencil"></i></li>
-           </button>
-           <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">	
-           <li><i class="fa-solid fa-trash"></i></li>
-           </button>
-         </div>
-       </div>
-<!------ Barra GITHUB ---->
-       <div class="skill mb-4">
-         <div class="d-flex justify-content-between">
-           <h6 class="tecnologia">GitHub</h6>
-           <h6 class="porcentaje">85%</h6>
-         </div>
-         <div class="progress">
-           <div class="progress-bar" id="GitHub" role="progressbar" style="--w:85%;"></div>
-         </div>
-    <!--Botones editar/eliminar-->
-         <div class="col" *ngIf="onEdition">	
-          <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#skillsBtnModal">	
-            <li><i class="fa-solid fa-pencil"></i></li>
-          </button>
-          <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
-            <li><i class="fa-solid fa-trash"></i></li>
-          </button>
-         </div>
-       </div>
-<!------ Barra JAVASCRIPT ---->
-      <div class="skill mb-4">
-        <div class="d-flex justify-content-between">
-          <h6 class="tecnologia">Javascript</h6>
-          <h6 class="porcentaje">30%</h6>
-        </div>
-        <div class="progress">
-          <div class="progress-bar" id="Javascript" role="progressbar" style="--w:30%;"></div>
-        </div>
-   <!--Botones editar/eliminar-->
-        <div class="col" *ngIf="onEdition">	
-         <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#skillsBtnModal">	
-           <li><i class="fa-solid fa-pencil"></i></li>
-         </button>
-         <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">	
-           <li><i class="fa-solid fa-trash"></i></li>
-         </button>
-        </div>
-      </div>
-    </div> 
+</div> 
 
 <!----------------------------------- SEGUNDA COLUMNA --------------------------------------->
-    <div class="col-md-6">
+    <div class="col-md-6" *ngFor="let skills of habilidades">
 <!----- Barra ANGULAR ------>
       <div class="skill mb-4">
         <div class="d-flex justify-content-between">
-          <h6 class="tecnologia">Angular</h6>
-          <h6 class="porcentaje">65%</h6>
+          <h6 class="tecnologia">{{skills.tecnologia}}</h6>
+          <h6 class="porcentaje">{{skills.porcentaje}}</h6>
         </div>
         <div class="progress">
-         <div class="progress-bar bg-danger" id="Angular" role="progressbar" style="--w:65%;"></div>
+         <div class="progress-bar bg-danger" id="Angular" role="progressbar" [style.width.%]="skills.porcentaje"></div>
         </div>
         <!--Botones editar/eliminar-->
        <div class="col" *ngIf="onEdition">	
@@ -167,62 +110,6 @@
          </button>
        </div>
      </div>
-<!----- Barra MYSQL ------>
-     <div class="skill mb-4">
-       <div class="d-flex justify-content-between">
-         <h6 class="tecnologia">Mysql</h6>
-         <h6 class="porcentaje">55%</h6>
-       </div>
-       <div class="progress">
-         <div class="progress-bar bg-info" id="Mysql" role="progressbar" style="--w:55%;"></div>
-       </div>
-    <!--Botones editar/eliminar-->
-       <div class="col" *ngIf="onEdition">	
-        <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#skillsBtnModal">	
-          <li><i class="fa-solid fa-pencil"></i></li>
-        </button>
-        <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
-          <li><i class="fa-solid fa-trash"></i></li>
-        </button>
-      </div>
-     </div>
-<!----- Barra JAVA ------>
-     <div class="skill mb-4">
-       <div class="d-flex justify-content-between">
-         <h6 class="tecnologia">Java</h6>
-         <h6 class="porcentaje">50%</h6>
-       </div>
-       <div class="progress">
-         <div class="progress-bar bg-dark" id="java" role="progressbar" style="--w:50%;"></div>
-       </div><!--Botones editar/eliminar-->
-       <div class="col" *ngIf="onEdition">	
-        <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#skillsBtnModal">	
-          <li><i class="fa-solid fa-pencil"></i></li>
-        </button>
-        <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
-          <li><i class="fa-solid fa-trash"></i></li>
-        </button>
-       </div>
-     </div>
-<!----- Barra SPRING BOOT ------>
-     <div class="skill mb-4">
-      <div class="d-flex justify-content-between">
-        <h6 class="tecnologia">Spring Boot</h6>
-        <h6 class="porcentaje">55%</h6>
-      </div>
-      <div class="progress">
-        <div class="progress-bar" id="SpringBoot" role="progressbar" style="--w:55%;"></div>
-      </div>
-    <!--Botones editar/eliminar-->
-      <div class="col" *ngIf="onEdition">	
-       <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#skillsBtnModal">	
-         <li><i class="fa-solid fa-pencil"></i></li>
-       </button>
-       <button type="button" class="btn trash" data-bs-toggle="modal"  data-bs-target="#eliminar-Modal">	
-         <li><i class="fa-solid fa-trash"></i></li>
-       </button>
-     </div>
-    </div>
   </div>
 </div>
 </div>

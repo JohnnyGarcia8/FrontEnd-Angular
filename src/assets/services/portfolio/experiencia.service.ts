@@ -10,7 +10,7 @@ export class ExperienciaService {
 
   constructor(private http:HttpClient) { }
 
-  private url = 'http://localhost:8080/experiencia';
+  private url = 'https://jonathan-garcia.onrender.com/experiencia';
 
   
   getExperiencia(): Observable<Experiencia[]> {

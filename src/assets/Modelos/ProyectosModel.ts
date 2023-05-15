@@ -1,8 +1,8 @@
 export interface Proyectos {
-    id?:          number;
-    title_proyecto:         string;
+    id?:                  number;
+    title_proyecto:       string;
+    fecha_inicio :        string;
+    fecha_fin :           string;
     img_proyecto:         string;
-    fecha_inico :         string;
-    fecha_fin :          string;
     descripcion:          string;
 }
