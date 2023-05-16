@@ -3,18 +3,13 @@
 <header id="banner">
 <div class="horizontal-padding vertical-padding"> 
   <section class="profile" id="perfil">
-    <div class="profile-info">
+    <div class="profile-info" *ngFor="let pers of personasperfil">
       <h3 class="profile-small-title">Bienvenido, soy </h3>
-      <h1 class="profile-title">Jonathan García</h1>
-      <h2 class="profile-titulo-academico">Desarrolador Full Stack Jr</h2>
-      <p class="profile-details">
-        Como joven programador con experiencia limitada, estoy enfocado en expandir continuamente mis conocimientos
-        y el dominio de nuevas tecnologias. Me destaco por ser una persona dedicada y responsable en busca de 
-        un grupo de trabajo unido y dispuesto a crecer. Estoy comprometido a entregar código de alta calidad que 
-        satisfaga las necesidades de los clientes y usuarios finales por igual.
-      </p>
-     <!--Boton editar Acerca de mi -->
-     <div class="col" *ngIf="onEdition"> <!-- utilizo ngIf para ocultar y luego mostar un elemento HTML en la pag que ve el usuario (en este caso todo lo que contiene los botones de edicion) en función de una condición a cumplir-->
+      <h1 class="profile-title">{{pers.nombre_apellido}}</h1>
+      <h2 class="profile-titulo-academico">{{pers.titulo_acad}}</h2>
+      <p class="profile-details">{{pers.descripcion}}</p>
+    <!--Boton editar Acerca de mi -->
+      <div class="col" *ngIf="onEdition"> <!-- utilizo ngIf para ocultar y luego mostar un elemento HTML en la pag que ve el usuario (en este caso todo lo que contiene los botones de edicion) en función de una condición a cumplir-->
       <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#acercadeModal">	
         <i class="fa-solid fa-pencil"></i>
       </button>
@@ -96,37 +91,37 @@
     </div>
   </div>
 </div>
-</div>
-       <!-- IMG Perfil-->	
-    <span class="profile-img-section">
-      <img class="profile-img" src="../../../../../assets/img/fototraje2.jpg" alt="programador"/> 
-     <!--Boton editar IMG Perfil-->
-     <div class="col" *ngIf="onEdition">	
-      <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#imgPerfilModal">	
-        <i class="fa-solid fa-pencil"></i>
-      </button>
-      <!-- Modal IMG Perfil-->
-     <div class="modal fade" id="imgPerfilModal" tabindex="-1" aria-labelledby="imgPerfilModalLabel" aria-hidden="true">	
-   <div class="modal-dialog modal-content">
-    <div class="modal-header">
-      <h3 class="modal-title w-100 text-center">Imagen de perfil</h3>	 
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-    </div>		
-       <div class="modal-body">
-        <div class="mb-1">
-          <label class="form-group pb-2">Nueva imagen</label>	
-        <div class="col-sm-12">
-          <input class="form-control" placeholder="URL">
+</div>   
+   <!---------- IMG Perfil----------->	
+    <span class="profile-img-section" *ngFor="let pers of personasperfil">
+      <img class="profile-img" [attr.src]="pers.foto_url"  alt="programador"/> 
+         <!--Boton editar IMG Perfil-->
+        <div class="col" *ngIf="onEdition">	
+          <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#imgPerfilModal">	
+            <i class="fa-solid fa-pencil"></i>
+          </button>
+          <!-- Modal IMG Perfil-->
+          <div class="modal fade" id="imgPerfilModal" tabindex="-1" aria-labelledby="imgPerfilModalLabel" aria-hidden="true">	
+            <div class="modal-dialog modal-content">
+             <div class="modal-header">
+               <h3 class="modal-title w-100 text-center">Imagen de perfil</h3>	 
+               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+             </div>		
+                <div class="modal-body">
+                  <div class="mb-1">
+                    <label class="form-group pb-2">Nueva imagen</label>	
+                    <div class="col-sm-12">
+                      <input class="form-control" placeholder="URL">
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer pb-1 pt-1">
+                  <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+           </div>
+          </div>
         </div>
-       </div>
-     </div>
-     <div class="modal-footer pb-1 pt-1">
-      <button type="button" class="btn btn-primary">Guardar</button>
-    </div>
-  </div>
-</div>
-</div>
-</span>
-</section>
+    </span>
+  </section>
 </div>
 </header>

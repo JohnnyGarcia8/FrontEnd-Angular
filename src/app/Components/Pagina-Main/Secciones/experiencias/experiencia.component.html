@@ -10,9 +10,10 @@
               <h2 class="subtitle">Académica
                   <!--BOTONES-->
                   <!--Boton y modal AGREGAR Empleos-->
-                  <div class="col" *ngIf="onEdition"> <button type="button" class="btn agregar" data-bs-toggle="modal" data-bs-target="#plus-edu-Modal">
-                          <li><i class="fa-sharp fa-solid fa-plus"></i></li>
-                      </button>
+                  <div class="col" *ngIf="onEdition"> 
+                    <button type="button" class="btn agregar" data-bs-toggle="modal" data-bs-target="#plus-edu-Modal">
+                        <li><i class="fa-sharp fa-solid fa-plus"></i></li>
+                    </button>
                       <div class="modal fade modal-lg" id="plus-edu-Modal" tabindex="-1" aria-labelledby="plus-edu-ModalLabel" aria-hidden="true">
                           <div class="modal-dialog modal-content">
                               <div class="modal-header">
@@ -33,9 +34,8 @@
                               <div class="modal-footer"> <button type="button" class="btn btn-primary">Agregar</button> </div>
                           </div>
                       </div>
-                      <!--Botones editar/eliminar Educacion--> <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#educacionModal">
-                          <li><i class="fa-solid fa-pencil"></i></li>
-                      </button> <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
+                      <!--Botones eliminar Educacion-->  
+                      <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
                           <li><i class="fa-solid fa-trash"></i></li>
                       </button> <!-- Modal Educacion-->
                       <!--coloco el modal una vez por columna y lo llamo mediante sus botones (y en las demas secciones)-->
@@ -116,9 +116,8 @@
                               <div class="modal-footer"> <button type="button" class="btn btn-primary">Agregar</button> </div>
                           </div>
                       </div>
-                      <!--Botones editar/eliminar Trabajo --> <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#trabajoModal">
-                          <li><i class="fa-solid fa-pencil"></i></li>
-                      </button> <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
+                      <!--Botones eliminar Trabajo --> 
+                      <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
                           <li><i class="fa-solid fa-trash"></i></li>
                       </button> <!-- Modal Trabajo-->
                       <!--coloco el modal una vez por columna y lo llamo mediante sus botones-->
@@ -193,7 +192,9 @@
                 <!--Boton editar/eliminar Certificados-->
                 <div class="col" *ngIf="onEdition"> 
                     <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#certificadosModal"> 
-                        <i class="fa-solid fa-pencil"></i> </button> <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
+                        <i class="fa-solid fa-pencil"></i> 
+                    </button> 
+                    <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
                         <li><i class="fa-solid fa-trash"></i></li>
                     </button> <!-- Modal Certificados-->
                     <div class="modal fade" id="certificadosModal" tabindex="-1" aria-labelledby="certificadosModalLabel" aria-hidden="true">
