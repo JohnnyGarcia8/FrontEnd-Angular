@@ -1,111 +1,114 @@
-   <!------------------- Proyectos ---------------------->
-   <div class="horizontal-padding vertical-padding">  
-    <section class="project" id="proyectos">
-      <div class="project-body">
+<!------------------- Proyectos ---------------------->
+<div class="horizontal-padding vertical-padding">
+  <section class="project" id="proyectos">
+    <div class="project-body">
       <div class="container text-center">
-        <div class="position-relative d-flex align-items-center justify-content-center"> <!--propiedades-->
-          <h1 class="project-title" style="-webkit-text-stroke: 2px #4ab7df;">Proyectos</h1>
-    <!--Boton y modal AGREGAR Proyectos-->
-          <button type="button" *ngIf="onEdition" class="btn agregar" data-bs-toggle="modal" data-bs-target="#plus-proyect-Modal">	
-           <li><i class="fa-sharp fa-solid fa-plus"></i></li>
-           </button>
-           <div class="modal fade modal-lg" id="plus-proyect-Modal" tabindex="-1" aria-labelledby="plus-proyect-ModalLabel" aria-hidden="true">	
-             <div class="modal-dialog modal-content">
-               <div class="modal-header">
-                 <h3 class="modal-title w-100 text-center">Proyectos </h3>	 
-                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-               </div>
-               <div class="modal-body pb-0">
-                 <div class="mb-3">
-                   <label class="form-group pb-2">Título </label>
-                   <div class="col-sm-12">
-                     <input type="text" class="form-control">
-                   </div>
-                 </div>
-                 <div class="mb-3">
-                   <label class="form-group pb-2">Fecha </label>
-                   <div class="col-sm-12">
-                     <input type="text" class="form-control">
-                   </div>
-                 </div>
-                 <div class="mb-3">
-                   <label class="form-group pb-2">Nueva imagen</label>	
-                 <div class="col-sm-12">
-                   <input class="form-control" placeholder="URL">
-                 </div>
+        <div class="position-relative d-flex align-items-center justify-content-center">
+          <!--propiedades-->
+          <h1 class="project-title" style="-webkit-text-stroke: 2px #4ab7df">
+            Proyectos
+          </h1>
+          <!--Boton y modal AGREGAR Proyectos-->
+          <button type="button" *ngIf="onEdition" class="btn agregar" data-bs-toggle="modal"
+            data-bs-target="#plus-proyect-Modal">
+            <li><i class="fa-sharp fa-solid fa-plus"></i></li>
+          </button>
+          <div class="modal fade modal-lg" id="plus-proyect-Modal" tabindex="-1"
+            aria-labelledby="plus-proyect-ModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title w-100 text-center">Proyectos</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body pb-0">
+                <div class="mb-3">
+                  <label class="form-group pb-2">Título </label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control" />
+                  </div>
                 </div>
-                 <div class="mb-3">
-                   <label class="form-group pb-1">Descripción</label>
-                   <textarea class="form-control" rows="3"></textarea>
-                 </div>
-                 </div>
-               <div class="modal-footer">
-                 <button type="button" class="btn btn-primary">Agregar</button>
-               </div>
-             </div>
-           </div>
+                <div class="mb-3">
+                  <label class="form-group pb-2">Fecha </label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control" />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-group pb-2">Nueva imagen</label>
+                  <div class="col-sm-12">
+                    <input class="form-control" placeholder="URL" />
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-group pb-1">Descripción</label>
+                  <textarea class="form-control" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Agregar</button>
+              </div>
+            </div>
+          </div>
         </div>
 
-<!--------------------------------- PROYECTO 1 ------------------------------------------->
+        <!--------------------------------- PROYECTO 1 ------------------------------------------->
         <div class="projects" *ngFor="let proyec of proyectos">
-        <h3 class="project-subtitle">{{proyec.title_proyecto}}</h3>
-        <span class="project-date">{{proyec.fecha_inicio + ' - ' + proyec.fecha_fin}}</span>
-        <span class="project-img-section">
-          <img class="img-fluid" src="proyec.img_proyecto" alt="{{proyec.title_proyecto}}">
-        </span>
-        <h5 class="project-description">{{proyec.descripcion}}</h5>
-   <!---Boton editar/eliminar proyectos 1 --->
-     <div class="col pb-3 mb-1" *ngIf="onEdition">
-       <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#proyectosModal">	
-         <i class="fa-solid fa-pencil"></i>
-       </button>
-       <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">	
-         <li><i class="fa-solid fa-trash"></i></li>
-       </button>
-   <!-- Modal Proyectos -->	
-        <div class="modal fade modal-lg" id="proyectosModal" tabindex="-1" aria-labelledby="proyectosModalLabel" aria-hidden="true">	
-          <div class="modal-dialog modal-content">
-            <div class="modal-header">
-             <h3 class="modal-title w-100 text-center">Proyectos </h3>	 
-             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          <h3 class="project-subtitle">{{proyec.title_proyecto}}</h3>
+          <span class="project-date">
+            {{proyec.fecha_inicio + " - " + proyec.fecha_fin}}
+          </span>
+          <span class="project-img-section">
+            <img class="img-fluid" src="proyec.img_proyecto" alt="{{ proyec.title_proyecto }}" />
+          </span>
+          <h5 class="project-description">{{proyec.descripcion}}</h5>
+          <!---Boton editar/eliminar proyectos 1 --->
+          <div class="col pb-3 mb-1" *ngIf="onEdition">
+            <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#proyectosModal">
+              <i class="fa-solid fa-pencil"></i>
+            </button>
+            <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
+              <li><i class="fa-solid fa-trash"></i></li>
+            </button>
+            <!-- Modal Proyectos -->
+            <div class="modal fade modal-lg" id="proyectosModal" tabindex="-1" aria-labelledby="proyectosModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-content">
+                <div class="modal-header">
+                  <h3 class="modal-title w-100 text-center">Proyectos</h3>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body pb-0">
+                  <div class="mb-3">
+                    <label class="form-group pb-2">Título </label>
+                    <div class="col-sm-12">
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-group pb-2">Fecha </label>
+                    <div class="col-sm-12">
+                      <input type="text" class="form-control" />
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-group pb-2">Nueva imagen</label>
+                    <div class="col-sm-12">
+                      <input class="form-control" placeholder="URL" />
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <label class="form-group pb-1">Descripción</label>
+                    <textarea class="form-control" rows="3"></textarea>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-primary">Guardar</button>
+                </div>
+              </div>
             </div>
-            <div class="modal-body pb-0">
-             <div class="mb-3">
-               <label class="form-group pb-2">Título </label>
-               <div class="col-sm-12">
-                 <input type="text" class="form-control">
-               </div>
-             </div>
-             <div class="mb-3">
-               <label class="form-group pb-2">Fecha </label>
-               <div class="col-sm-12">
-                 <input type="text" class="form-control">
-               </div>
-             </div>
-             <div class="mb-3">
-               <label class="form-group pb-2">Nueva imagen</label>	
-             <div class="col-sm-12">
-               <input class="form-control" placeholder="URL">
-             </div>
-            </div>
-             <div class="mb-3">
-               <label class="form-group pb-1">Descripción</label>
-               <textarea class="form-control" rows="3"></textarea>
-             </div>
-             </div>
-           <div class="modal-footer">
-             <button type="button" class="btn btn-primary">Guardar</button>
-           </div>
-         </div>
-       </div>
-      </div>
-     </div>
-
-  <!------------------------------- PROYECTO 2 ------------------------------------------->
+          </div>
         </div>
       </div>
-    </section>
-  </div> 
-
-
-   
+    </div>
+  </section>
+</div>

@@ -4,7 +4,7 @@
     <div class="container-fluid">
       <div class="logo">
         <a href="https://www.argentina.gob.ar/economia/conocimiento/argentina-programa" target="_blank">
-         <img src="../../../assets/img/Logo ARGPrograma negro" alt="Logo distintivo">
+          <img src="../../../assets/img/Logo ARGPrograma negro" alt="Logo distintivo">
         </a>
       </div>
       <button class="open-menu" (click)="menu=true">
@@ -14,22 +14,23 @@
         <button class="close-menu" (click)="menu=false">
           <i class="fa-solid fa-arrow-left fa-2xl"></i>
         </button>
-       <li class="nav-item"><a class="nav-link active" aria-current="page" href="#" (mouseup)="menu=false">Perfil</a></li>
-       <li class="nav-item"><a class="nav-link" href="#experiencia" (mouseup)="menu=false" >Experiencia</a></li> <!--evento que ocurre luego del click, es decir que cierra menu despde hacer click e ir a una seccion-->
-       <li class="nav-item"><a class="nav-link" href="#skills" (mouseup)="menu=false">Habilidades</a></li>
-       <li class="nav-item"><a class="nav-link" href="#proyectos" (mouseup)="menu=false">Proyectos</a></li>
-       <li class="nav-item"><a class="nav-link" href="#contacto" (mouseup)="menu=false">Contacto</a></li>
-       
-<!--Boton USER entrar-->
+        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#" (mouseup)="menu=false">Perfil</a>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="#experiencia" (mouseup)="menu=false">Experiencia</a></li><!--evento que ocurre luego del click, es decir que cierra menu despde hacer click e ir a una seccion-->
+        <li class="nav-item"><a class="nav-link" href="#skills" (mouseup)="menu=false">Habilidades</a></li>
+        <li class="nav-item"><a class="nav-link" href="#proyectos" (mouseup)="menu=false">Proyectos</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contacto" (mouseup)="menu=false">Contacto</a></li>
+        <!--Boton USER entrar-->
         <li class="btn" *ngIf="!onLogged">
           <i class="fa-solid fa-user-lock fa-2xl" type="button" data-bs-toggle="modal" data-bs-target="#loginModal"></i>
         </li>
         <!--Boton salir de USER-->
-        <li class="btn" *ngIf="onLogged" (click)="outLog()"> <!--Boton de cerrar sesion se habilita si se cumple la condicion-->
+        <li class="btn" *ngIf="onLogged" (click)="outLog()">
+          <!--Boton de cerrar sesion se habilita si se cumple la condicion-->
           <i class="fa-solid fa-arrow-right-from-bracket fa-2xl" type="button"></i>
-         </li>
+        </li>
       </ul>
     </div>
   </nav>
-<app-login></app-login>
+  <app-login></app-login>
 </header>

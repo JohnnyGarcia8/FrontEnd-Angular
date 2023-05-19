@@ -7,140 +7,143 @@
         <p class="contact-label">{{cont.title_direccion}}</p>
         <p class="contact-text">{{cont.localidad}}</p>
       </div>
- <!--- Botones editar/eliminar Direccion --->
-      <div class="col" *ngIf="onEdition" id="botones-contacto">	
-       <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#direccionModal">	
-         <li><i class="fa-solid fa-pencil"></i></li>
-       </button>
-       <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">	
-         <li><i class="fa-solid fa-trash"></i></li>
-       </button>
- <!--- Modal Direccion --->  
-      <div class="modal fade" id="direccionModal" tabindex="-1" aria-labelledby="direccionModalLabel" aria-hidden="true">
-       <div class="modal-dialog modal-content">
-         <div class="modal-header">
-           <h3 class="modal-title w-100 text-center">Dirección</h3>	 
-           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-         </div>		
-         <div class="modal-body ">
-           <div class="mb-1">
-             <label class="form-group pb-2">Nuevo título </label>	
-           <div class="col-sm-12">
-             <input type="text" class="form-control">
-           </div>
-           <div class="mb-1">
-             <label class="form-group pb-2">Localidad </label>	
-           <div class="col-sm-12">
-             <input type="text" class="form-control">
-           </div>	
-         </div>	
-         </div>
-       </div>
-       <div class="modal-footer pb-1 pt-1">
-         <button type="button" class="btn btn-primary">Guardar</button>
-       </div>
+      <!--- Botones editar/eliminar Direccion --->
+      <div class="col" *ngIf="onEdition" id="botones-contacto">
+        <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#direccionModal">
+          <li><i class="fa-solid fa-pencil"></i></li>
+        </button>
+        <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
+          <li><i class="fa-solid fa-trash"></i></li>
+        </button>
+        <!--- Modal Direccion --->
+        <div class="modal fade" id="direccionModal" tabindex="-1" aria-labelledby="direccionModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title w-100 text-center">Dirección</h3>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body ">
+              <div class="mb-1">
+                <label class="form-group pb-2">Nuevo título </label>
+                <div class="col-sm-12">
+                  <input type="text" class="form-control">
+                </div>
+                <div class="mb-1">
+                  <label class="form-group pb-2">Localidad </label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer pb-1 pt-1">
+              <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
       <div class="contact-details-group">
         <p class="contact-label">{{cont.title_email}}</p>
         <p class="contact-text">{{cont.new_email}}</p>
       </div>
- <!--- Botones editar/eliminar Email --->
-      <div class="col" *ngIf="onEdition" id="botones-contacto">	
-       <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#emailModal">	
-         <li><i class="fa-solid fa-pencil"></i></li>
-       </button>
-       <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">	
-         <li><i class="fa-solid fa-trash"></i></li>
-       </button>
- <!--- Modal Email --->  
-      <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
-       <div class="modal-dialog modal-content">
-         <div class="modal-header">
-           <h3 class="modal-title w-100 text-center">Email</h3>	 
-           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-         </div>		
-         <div class="modal-body ">
-           <div class="mb-1">
-             <label class="form-group pb-2">Nuevo título </label>	
-           <div class="col-sm-12">
-             <input type="text" class="form-control">
-           </div>
-           <div class="mb-1">
-             <label class="form-group pb-2">Su email </label>	
-           <div class="col-sm-12">
-             <input type="text" class="form-control">
-           </div>	
-         </div>	
-         </div>
-       </div>
-       <div class="modal-footer pb-1 pt-1">
-         <button type="button" class="btn btn-primary">Guardar</button>
-       </div>
+      <!--- Botones editar/eliminar Email --->
+      <div class="col" *ngIf="onEdition" id="botones-contacto">
+        <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#emailModal">
+          <li><i class="fa-solid fa-pencil"></i></li>
+        </button>
+        <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
+          <li><i class="fa-solid fa-trash"></i></li>
+        </button>
+        <!--- Modal Email --->
+        <div class="modal fade" id="emailModal" tabindex="-1" aria-labelledby="emailModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title w-100 text-center">Email</h3>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body ">
+              <div class="mb-1">
+                <label class="form-group pb-2">Nuevo título </label>
+                <div class="col-sm-12">
+                  <input type="text" class="form-control">
+                </div>
+                <div class="mb-1">
+                  <label class="form-group pb-2">Su email </label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="modal-footer pb-1 pt-1">
+              <button type="button" class="btn btn-primary">Guardar</button>
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
       <div class="contact-details-group">
         <p class="contact-text">
           {{cont.descripcion}}
         </p>
- <!--- Botones editar/eliminar descripcionCt --->
-        <div class="col" *ngIf="onEdition" id="botones-contacto">	
-         <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#descripcionCtModal">	
-           <li><i class="fa-solid fa-pencil"></i></li>
-         </button>
-         <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">	
-           <li><i class="fa-solid fa-trash"></i></li>
-         </button>
- <!--- Modal descripcionCt --->  
-        <div class="modal fade" id="descripcionCtModal" tabindex="-1" aria-labelledby="descripcionCtModalLabel" aria-hidden="true">
-         <div class="modal-dialog modal-content">
-           <div class="modal-header">
-             <h3 class="modal-title w-100 text-center">Mensaje</h3>	 
-             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-           </div>		
-           <div class="modal-body">
-             <div class="mb-3">
-               <label class="form-group pb-1">Descripción</label>
-               <textarea class="form-control" rows="3"></textarea>
-             </div>
-           </div>
-         <div class="modal-footer pb-1 pt-1">
-           <button type="button" class="btn btn-primary">Guardar</button>
-         </div>
-       </div>
-     </div>
-   </div>
- </div>
-</div>
-    <form class="contact-form" name="contact" *ngFor="let cont of contactos"> 
+        <!--- Botones editar/eliminar descripcionCt --->
+        <div class="col" *ngIf="onEdition" id="botones-contacto">
+          <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#descripcionCtModal">
+            <li><i class="fa-solid fa-pencil"></i></li>
+          </button>
+          <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
+            <li><i class="fa-solid fa-trash"></i></li>
+          </button>
+          <!--- Modal descripcionCt --->
+          <div class="modal fade" id="descripcionCtModal" tabindex="-1" aria-labelledby="descripcionCtModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title w-100 text-center">Mensaje</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label class="form-group pb-1">Descripción</label>
+                  <textarea class="form-control" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="modal-footer pb-1 pt-1">
+                <button type="button" class="btn btn-primary">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <form class="contact-form" name="contact" *ngFor="let cont of contactos">
       <div class="contact-form-group">
         <label for="name">{{cont.form_nombre}}</label>
-        <input required type="text" name="name" id="name"/>
+        <input required type="text" name="name" id="name" />
       </div>
       <div class="contact-form-group">
         <label for="email">{{cont.form_email}}</label>
-        <input required type="email" name="email" id="email"/>
+        <input required type="email" name="email" id="email" />
       </div>
       <div class="contact-form-group">
         <label for="message">{{cont.form_mensaje}}</label>
         <textarea required name="message" id="message" rows="6"></textarea>
       </div>
       <button type="submit" class="contact-form-submit">Enviar</button>
- <!---Boton editar/eliminar Formulario contacto --->
+      <!---Boton editar/eliminar Formulario contacto --->
       <div class="col pb-3 mb-1" *ngIf="onEdition">
-        <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#formContactoModal">	
+        <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#formContactoModal">
           <i class="fa-solid fa-pencil"></i>
         </button>
-        <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">	
+        <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
           <li><i class="fa-solid fa-trash"></i></li>
         </button>
- <!-- Modal Formulario contacto -->	
-        <div class="modal fade modal-lg" id="formContactoModal" tabindex="-1" aria-labelledby="formContactoModalLabel" aria-hidden="true">	
+        <!-- Modal Formulario contacto -->
+        <div class="modal fade modal-lg" id="formContactoModal" tabindex="-1" aria-labelledby="formContactoModalLabel"
+          aria-hidden="true">
           <div class="modal-dialog modal-content">
             <div class="modal-header">
-              <h3 class="modal-title w-100 text-center">Formulario </h3>	 
+              <h3 class="modal-title w-100 text-center">Formulario </h3>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body pb-0">
@@ -157,68 +160,75 @@
                 </div>
               </div>
               <div class="mb-3">
-               <label class="form-group pb-2">Mensaje </label>
-               <div class="col-sm-12">
-                 <input type="text" class="form-control">
-               </div>
-             </div>
+                <label class="form-group pb-2">Mensaje </label>
+                <div class="col-sm-12">
+                  <input type="text" class="form-control">
+                </div>
               </div>
+            </div>
             <div class="modal-footer">
               <button type="submit" class="btn btn-primary">Guardar</button>
             </div>
           </div>
         </div>
-       </div>
+      </div>
     </form>
-     <nav class="redes">
-       <div class="container-center">
-         <ul class="list-group list-group-horizontal">
-          <a href="https://www.linkedin.com/in/johnny-garcia-74204a262/" target="_blank"><li class="list-group-item"><i class="fa-brands fa-linkedin-in fa-2xl"></i></li></a>
-          <a href="https://mail.google.com/mail/u/0/?pli=1#inbox" target="_blank"><li class="list-group-item"><i class="fa-regular fa-envelope fa-2xl"></i></li></a>
-          <a href="https://github.com/JohnnyGarcia8" target="_blank"><li class="list-group-item"><i class="fa-brands fa-github fa-2xl"></i></li></a>
-         </ul>
-       </div>
-     </nav>
- <!---Boton editar/eliminar Redes --->
-     <div class="col pb-3 mb-1" *ngIf="onEdition" >
-     <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#redesContactoModal">	
-       <i class="fa-solid fa-pencil"></i>
-     </button>
-     <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">	
-       <li><i class="fa-solid fa-trash"></i></li>
-     </button>
-<!-- Modal Redes-->	
-     <div class="modal fade modal-lg" id="redesContactoModal" tabindex="-1" aria-labelledby="redesContactoModalLabel" aria-hidden="true">	
-       <div class="modal-dialog modal-content">
-         <div class="modal-header">
-           <h3 class="modal-title w-100 text-center">Redes </h3>	 
-           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-         </div>
-         <div class="modal-body pb-0">
-           <div class="mb-3">
-             <label class="form-group pb-2">Icono 1 </label>
-             <div class="col-sm-12">
-               <input type="text" class="form-control">
-             </div>
-           </div>
-           <div class="mb-3">
-             <label class="form-group pb-2">Icono 2 </label>
-             <div class="col-sm-12">
-               <input type="text" class="form-control">
-             </div>
-           </div>
-           <div class="mb-3">
-            <label class="form-group pb-2">Icono 3 </label>
-            <div class="col-sm-12">
-              <input type="text" class="form-control">
+    <nav class="redes">
+      <div class="container-center">
+        <ul class="list-group list-group-horizontal">
+          <a href="https://www.linkedin.com/in/johnny-garcia-74204a262/" target="_blank">
+            <li class="list-group-item"><i class="fa-brands fa-linkedin-in fa-2xl"></i></li>
+          </a>
+          <a href="https://mail.google.com/mail/u/0/?pli=1#inbox" target="_blank">
+            <li class="list-group-item"><i class="fa-regular fa-envelope fa-2xl"></i></li>
+          </a>
+          <a href="https://github.com/JohnnyGarcia8" target="_blank">
+            <li class="list-group-item"><i class="fa-brands fa-github fa-2xl"></i></li>
+          </a>
+        </ul>
+      </div>
+    </nav>
+    <!---Boton editar/eliminar Redes --->
+    <div class="col pb-3 mb-1" *ngIf="onEdition">
+      <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#redesContactoModal">
+        <i class="fa-solid fa-pencil"></i>
+      </button>
+      <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
+        <li><i class="fa-solid fa-trash"></i></li>
+      </button>
+      <!-- Modal Redes-->
+      <div class="modal fade modal-lg" id="redesContactoModal" tabindex="-1" aria-labelledby="redesContactoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title w-100 text-center">Redes </h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body pb-0">
+            <div class="mb-3">
+              <label class="form-group pb-2">Icono 1 </label>
+              <div class="col-sm-12">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-group pb-2">Icono 2 </label>
+              <div class="col-sm-12">
+                <input type="text" class="form-control">
+              </div>
+            </div>
+            <div class="mb-3">
+              <label class="form-group pb-2">Icono 3 </label>
+              <div class="col-sm-12">
+                <input type="text" class="form-control">
+              </div>
             </div>
           </div>
-           </div>
-         <div class="modal-footer">
-           <button type="button" class="btn btn-primary">Guardar</button>
-         </div>
-       </div>
-     </div>
-     </div>
-   </section>
- </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

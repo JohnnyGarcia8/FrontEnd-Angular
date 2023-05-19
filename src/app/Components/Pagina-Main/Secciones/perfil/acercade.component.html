@@ -1,127 +1,131 @@
-
 <!---------------------- Perfil ---------------------->
 <header id="banner">
-<div class="horizontal-padding vertical-padding"> 
-  <section class="profile" id="perfil">
-    <div class="profile-info" *ngFor="let pers of personasperfil">
-      <h3 class="profile-small-title">Bienvenido, soy </h3>
-      <h1 class="profile-title">{{pers.nombre_apellido}}</h1>
-      <h2 class="profile-titulo-academico">{{pers.titulo_acad}}</h2>
-      <p class="profile-details">{{pers.descripcion}}</p>
-    <!--Boton editar Acerca de mi -->
-      <div class="col" *ngIf="onEdition"> <!-- utilizo ngIf para ocultar y luego mostar un elemento HTML en la pag que ve el usuario (en este caso todo lo que contiene los botones de edicion) en función de una condición a cumplir-->
-      <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#acercadeModal">	
-        <i class="fa-solid fa-pencil"></i>
-      </button>
-    <!-- Modal Acerca de mi -->	
-      <div class="modal fade modal-lg" id="acercadeModal" tabindex="-1" aria-labelledby="acercadeModalLabel" aria-hidden="true">	
-        <div class="modal-dialog modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title w-100 text-center"> Mi perfil</h3>	 <!--aplico w-100 extraido de la informacion proporcionada en stackoverflow, ya que intente centrarlo de varias formas y no me resultaba exactamente en el medio-->
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body pb-0">
-            <div class="mb-3">
-              <label class="form-group pb-2">Nombre y Apellido</label>
-              <div class="col-sm-12"><input type="text" class="form-control">
+  <div class="horizontal-padding vertical-padding">
+    <section class="profile" id="perfil">
+      <div class="profile-info" *ngFor="let pers of personasperfil">
+        <h3 class="profile-small-title">Bienvenido, soy </h3>
+        <h1 class="profile-title">{{pers.nombre_apellido}}</h1>
+        <h2 class="profile-titulo-academico">{{pers.titulo_acad}}</h2>
+        <p class="profile-details">{{pers.descripcion}}</p>
+        <!--Boton editar Acerca de mi -->
+        <div class="col" *ngIf="onEdition"><!-- utilizo ngIf para ocultar y luego mostar un elemento HTML en la pag que ve el usuario (en este caso todo lo que contiene los botones de edicion) en función de una condición a cumplir-->
+          <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#acercadeModal">
+            <i class="fa-solid fa-pencil"></i>
+          </button>
+          <!-- Modal Acerca de mi -->
+          <div class="modal fade modal-lg" id="acercadeModal" tabindex="-1" aria-labelledby="acercadeModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title w-100 text-center"> Mi perfil</h3>
+                <!--aplico w-100 extraido de la informacion proporcionada en stackoverflow, ya que intente centrarlo de varias formas y no me resultaba exactamente en el medio-->
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body pb-0">
+                <div class="mb-3">
+                  <label class="form-group pb-2">Nombre y Apellido</label>
+                  <div class="col-sm-12"><input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-group pb-2">Título Académico</label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label class="form-group pb-2">Descripción</label>
+                  <textarea class="form-control" rows="3"></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Guardar</button>
               </div>
             </div>
-            <div class="mb-3">
-              <label class="form-group pb-2">Título Académico</label>
-              <div class="col-sm-12">
-                <input type="text" class="form-control">
+          </div>
+        </div>
+        <!-- Casilla-Boton CV-->
+        <button class="profile-btn-cv">Descargar cv</button>
+        <!--Botones editar/eliminar-->
+        <div class="col" *ngIf="onEdition">
+          <!-- este onEdition se lo aplico a todas las secciones y sus respectivos editables-->
+          <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#BtnCvModal">
+            <i class="fa-solid fa-pencil"></i>
+          </button>
+          <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
+            <i class="fa-solid fa-trash"></i>
+          </button>
+          <!-- Modal ELIMINAR--> <!--coloco el modal una vez y lo llamo mediante su boton donde sea necesario-->
+          <div class="modal fade" id="eliminar-Modal" tabindex="-1" aria-labelledby="eliminar-ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title w-100 text-center">ATENCIÓN</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-1">
+                  <label class="form-group pb-2">¿Desea eliminar este elemento?</label>
+                </div>
+              </div>
+              <div class="modal-footer pb-1 pt-1">
+                <button type="button" class="btn btn-primary">Eliminar</button>
               </div>
             </div>
-            <div class="mb-3">
-              <label class="form-group pb-2">Descripción</label>
-              <textarea class="form-control" rows="3"></textarea>
+          </div>
+          <!-- Modal CV-->
+          <div class="modal fade" id="BtnCvModal" tabindex="-1" aria-labelledby="BtnCvModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title w-100 text-center">Casillero - Boton </h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-1">
+                  <label class="form-group pb-2">Título </label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer pb-1 pt-1">
+                <button type="button" class="btn btn-primary">Guardar</button>
+              </div>
             </div>
-            </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-primary">Guardar</button>
           </div>
         </div>
       </div>
-    </div>
-      <!-- Casilla-Boton CV-->	
-      <button class="profile-btn-cv">Descargar cv</button>
-      <!--Botones editar/eliminar-->
-     <div class="col" *ngIf="onEdition"> <!-- este onEdition se lo aplico a todas las secciones y sus respectivos editables-->	
-      <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#BtnCvModal">	
-        <i class="fa-solid fa-pencil"></i>
-      </button>
-      <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">	
-        <i class="fa-solid fa-trash"></i>
-      </button>
-      <!-- Modal ELIMINAR-->  <!--coloco el modal una vez y lo llamo mediante su boton donde sea necesario--> 
-      <div class="modal fade" id="eliminar-Modal" tabindex="-1" aria-labelledby="eliminar-ModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-content">
-          <div class="modal-header">
-            <h3 class="modal-title w-100 text-center">ATENCIÓN</h3>	 
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>		
-          <div class="modal-body">
-            <div class="mb-1">
-              <label class="form-group pb-2">¿Desea eliminar este elemento?</label>	
-            </div>
-          </div>
-          <div class="modal-footer pb-1 pt-1">
-          <button type="button" class="btn btn-primary">Eliminar</button>
-        </div>
-       </div>
-     </div>
-      <!-- Modal CV-->
-     <div class="modal fade" id="BtnCvModal" tabindex="-1" aria-labelledby="BtnCvModalLabel" aria-hidden="true">
-      <div class="modal-dialog modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title w-100 text-center">Casillero - Boton </h3>	 
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>		
-        <div class="modal-body">
-          <div class="mb-1">
-            <label class="form-group pb-2">Título </label>	
-          <div class="col-sm-12">
-            <input type="text" class="form-control">
-          </div>	
-        </div>
-      </div>
-      <div class="modal-footer pb-1 pt-1">
-        <button type="button" class="btn btn-primary">Guardar</button>
-      </div>
-    </div>
-  </div>
-</div>
-</div>   
-   <!---------- IMG Perfil----------->	
-    <span class="profile-img-section" *ngFor="let pers of personasperfil">
-      <img class="profile-img" [attr.src]="pers.foto_url"  alt="programador"/> 
-         <!--Boton editar IMG Perfil-->
-        <div class="col" *ngIf="onEdition">	
-          <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#imgPerfilModal">	
+      <!---------- IMG Perfil----------->
+      <span class="profile-img-section" *ngFor="let img of personasperfil">
+        <img class="profile-img" [src]="img.foto_url" alt="programador" />
+        <!--Boton editar IMG Perfil-->
+        <div class="col" *ngIf="onEdition">
+          <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#imgPerfilModal">
             <i class="fa-solid fa-pencil"></i>
           </button>
           <!-- Modal IMG Perfil-->
-          <div class="modal fade" id="imgPerfilModal" tabindex="-1" aria-labelledby="imgPerfilModalLabel" aria-hidden="true">	
+          <div class="modal fade" id="imgPerfilModal" tabindex="-1" aria-labelledby="imgPerfilModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-content">
-             <div class="modal-header">
-               <h3 class="modal-title w-100 text-center">Imagen de perfil</h3>	 
-               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-             </div>		
-                <div class="modal-body">
-                  <div class="mb-1">
-                    <label class="form-group pb-2">Nueva imagen</label>	
-                    <div class="col-sm-12">
-                      <input class="form-control" placeholder="URL">
-                    </div>
+              <div class="modal-header">
+                <h3 class="modal-title w-100 text-center">Imagen de perfil</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-1">
+                  <label class="form-group pb-2">Nueva imagen</label>
+                  <div class="col-sm-12">
+                    <input class="form-control" placeholder="URL">
                   </div>
                 </div>
-                <div class="modal-footer pb-1 pt-1">
-                  <button type="button" class="btn btn-primary">Guardar</button>
-                </div>
-           </div>
+              </div>
+              <div class="modal-footer pb-1 pt-1">
+                <button type="button" class="btn btn-primary">Guardar</button>
+              </div>
+            </div>
           </div>
         </div>
-    </span>
-  </section>
-</div>
+      </span>
+    </section>
+  </div>
 </header>

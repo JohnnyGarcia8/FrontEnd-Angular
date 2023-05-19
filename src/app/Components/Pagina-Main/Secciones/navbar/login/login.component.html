@@ -1,34 +1,31 @@
-
 <!--Modal LOGIN_User--->
-<div class="modal fade modal-lg text-black" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-    <form [formGroup]="addLogin" (ngSubmit)="login()"> 
-  <div class="modal-dialog">
+<div class="modal fade modal-lg text-black" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+  aria-hidden="true">
+  <form [formGroup]="addLogin" (ngSubmit)="login()">
+    <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title w-100 text-center" id="login-ModalLabel"> Login</h1> <!--aplico w-100 extraido de la investigacion en stackoverflow ya que intente centrarlo de varias formas y no me resultaba exzactamente en el medio-->
+          <h1 class="modal-title w-100 text-center" id="login-ModalLabel"> Login</h1><!--aplico w-100 extraido de la investigacion en stackoverflow ya que intente centrarlo de varias formas y no me resultaba exzactamente en el medio-->
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
           <div class="mb-3 row">
             <label for="staticEmail" class="col-sm-2 col-form-label">Usuario </label>
             <div class="col-sm-10">
-              <input type="text" class="form-control" id="staticUser" 
-                     formControlName="usuario">
+              <input type="text" class="form-control" id="staticUser" formControlName="usuario">
             </div>
           </div>
-        <div class="mb-3 row">
-          <label for="inputPassword" class="col-sm-2 col-form-label">Clave </label>
-          <div class="col-sm-10">
-            <input type="password" class="form-control" id="inputPassword"
-                   formControlName="clave" >
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Clave </label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="inputPassword" formControlName="clave">
+            </div>
           </div>
         </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-primary">Ingresar</button>
+        </div>
       </div>
-    <div class="modal-footer">
-      <button type="submit" class="btn btn-primary">Ingresar</button>
     </div>
-  </div>
+  </form>
 </div>
-</form>
-</div>
-    

@@ -5,114 +5,94 @@
       <div class="container text-center">
         <div class="position-relative d-flex align-items-center justify-content-center">
           <h1 class="skills-title" style="-webkit-text-stroke: 2px #4ab7df;">Hard & Soft Skills</h1>
-<!--Boton y modal AGREGAR skills-->
-          <button type="button" *ngIf="onEdition" class="btn agregar" data-bs-toggle="modal" data-bs-target="#plus-skills-Modal">	
-           <li><i class="fa-sharp fa-solid fa-plus"></i></li>
-           </button>
-           <div class="modal fade" id="plus-skills-Modal" tabindex="-1" aria-labelledby="plus-skills-ModalLabel" aria-hidden="true">
-             <div class="modal-dialog modal-content">
-               <div class="modal-header">
-                 <h3 class="modal-title w-100 text-center">Tecnología </h3>
-                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-               </div>
-               <div class="modal-body">
-                 <div class="mb-1">
-                   <label class="form-group pb-2">Título </label>
-                   <div class="col-sm-12">
-                     <input type="text" class="form-control">
-                   </div>
-                 </div>
-               </div>
-               <div class="modal-body">
-                 <div class="mb-1">
-                   <label class="form-group pb-2">Porcentaje </label>	
-                 <div class="col-sm-12">
-                   <input type="text" class="form-control">
-                 </div>	
-               </div>
-             </div>
-             <div class="modal-footer pb-1 pt-1">
-               <button type="button" class="btn btn-primary">Agregar</button>
-             </div>
-           </div>
-         </div>
+          <!--Boton y modal AGREGAR skills-->
+          <button type="button" *ngIf="onEdition" class="btn agregar" data-bs-toggle="modal"
+            data-bs-target="#plus-skills-Modal">
+            <li><i class="fa-sharp fa-solid fa-plus"></i></li>
+          </button>
+          <!-- Modal agregar-->
+          <div class="modal fade" id="plus-skills-Modal" tabindex="-1" aria-labelledby="plus-skills-ModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-content">
+              <div class="modal-header">
+                <h3 class="modal-title w-100 text-center">Tecnología </h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="mb-1">
+                  <label class="form-group pb-2">Título </label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-body">
+                <div class="mb-1">
+                  <label class="form-group pb-2">Porcentaje </label>
+                  <div class="col-sm-12">
+                    <input type="text" class="form-control">
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer pb-1 pt-1">
+                <button type="button" class="btn btn-primary">Agregar</button>
+              </div>
+            </div>
+          </div>
         </div>
-        
-      <div class="row align-items-center">
-      <div class="col-md-6" *ngFor="let skills of habilidades"> <!-- md(medium) resolucion de pantalla  ≥768px -->
- <!------- Barra HTML ------->
-      <div class="skill mb-4"> <!--(margin-bottom-4) = (propiedad-lado-espacio)-->
-        <div class="d-flex justify-content-between">
-          <h6 class="tecnologia">{{skills.tecnologia}}</h6>  
-          <h6 class="porcentaje">{{skills.porcentaje}}%</h6>
+        <div class="row align-items-center">
+          <div class="col-md-6" *ngFor="let skills of habilidades"> <!-- md(medium) resolucion de pantalla  ≥768px -->
+            <!------- Barra HTML ------->
+            <div class="skill mb-4"> <!--(margin-bottom-4) = (propiedad-lado-espacio)-->
+              <div class="d-flex justify-content-between">
+                <h6 class="tecnologia">{{skills.tecnologia}}</h6>
+                <h6 class="porcentaje">{{skills.porcentaje}}%</h6>
+              </div>
+              <div class="progress"> <!--elemento indicador de progreso sacado de bootstrap-->
+                <div class="progress-bar" id="Html" role="progressbar" [style.width.%]="skills.porcentaje"></div>
+              </div>
+              <!--Botones editar/eliminar-->
+              <div class="col" *ngIf="onEdition">
+                <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#skillsBtnModal">
+                  <li><i class="fa-solid fa-pencil"></i></li>
+                </button>
+                <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
+                  <li><i class="fa-solid fa-trash"></i></li>
+                </button>
+                <!-- Modal Skills-->
+                <div class="modal fade" id="skillsBtnModal" tabindex="-1" aria-labelledby="skillsBtnModalLabel"
+                  aria-hidden="true">
+                  <div class="modal-dialog modal-content">
+                    <div class="modal-header">
+                      <h3 class="modal-title w-100 text-center">Tecnología </h3>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="mb-1">
+                        <label class="form-group pb-2">Título </label>
+                        <div class="col-sm-12">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-body">
+                      <div class="mb-1">
+                        <label class="form-group pb-2">Porcentaje </label>
+                        <div class="col-sm-12">
+                          <input type="text" class="form-control">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="modal-footer pb-1 pt-1">
+                      <button type="button" class="btn btn-primary">Guardar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="progress"> <!--elemento indicador de progreso sacado de bootstrap-->
-         <div class="progress-bar" id="Html" role="progressbar" [style.width.%]="skills.porcentaje"></div>
-        </div>
-   <!--Botones editar/eliminar-->
-       <div class="col" *ngIf="onEdition"> 
-        <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#skillsBtnModal">	
-          <li><i class="fa-solid fa-pencil"></i></li>
-        </button>
-        <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">	
-          <li><i class="fa-solid fa-trash"></i></li>
-        </button>
-        <!-- Modal CV-->
-       <div class="modal fade" id="skillsBtnModal" tabindex="-1" aria-labelledby="skillsBtnModalLabel" aria-hidden="true">
-         <div class="modal-dialog modal-content">
-           <div class="modal-header">
-             <h3 class="modal-title w-100 text-center">Tecnología </h3>
-             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-           </div>
-           <div class="modal-body">
-             <div class="mb-1">
-               <label class="form-group pb-2">Título </label>
-               <div class="col-sm-12">
-                 <input type="text" class="form-control">
-               </div>
-             </div>
-           </div>
-           <div class="modal-body">
-             <div class="mb-1">
-               <label class="form-group pb-2">Porcentaje </label>	
-             <div class="col-sm-12">
-               <input type="text" class="form-control">
-             </div>	
-           </div>
-         </div>
-         <div class="modal-footer pb-1 pt-1">
-           <button type="button" class="btn btn-primary">Guardar</button>
-         </div>
-       </div>
-     </div>
-   </div>
-  </div>
-</div> 
-
-<!----------------------------------- SEGUNDA COLUMNA --------------------------------------->
-    <div class="col-md-6" *ngFor="let skills of habilidades">
-<!----- Barra ANGULAR ------>
-      <div class="skill mb-4">
-        <div class="d-flex justify-content-between">
-          <h6 class="tecnologia">{{skills.tecnologia}}</h6>
-          <h6 class="porcentaje">{{skills.porcentaje}}</h6>
-        </div>
-        <div class="progress">
-         <div class="progress-bar bg-danger" id="Angular" role="progressbar" [style.width.%]="skills.porcentaje"></div>
-        </div>
-        <!--Botones editar/eliminar-->
-       <div class="col" *ngIf="onEdition">	
-         <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#skillsBtnModal">	
-           <li><i class="fa-solid fa-pencil"></i></li>
-         </button>
-         <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">	
-           <li><i class="fa-solid fa-trash"></i></li>
-         </button>
-       </div>
-     </div>
-  </div>
-</div>
-</div>
-</div>
-</section>
+      </div>
+    </div>
+  </section>
 </div>

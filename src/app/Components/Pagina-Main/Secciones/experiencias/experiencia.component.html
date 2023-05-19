@@ -1,220 +1,254 @@
 <div class="horizontal-padding ">
-  <section class="experience" id="experiencia">
-      <div class="contenido-seccion">
-          <h1 class="experience-title" style="-webkit-text-stroke: 2px #4ab7df;">Experiencia</h1> <!-- -webkit-text-stroke es una propiedad de Css que especifica el ancho y el color de los trazos de los caracteres de texto-->
-      </div>
-      <div class="fila">
+    <section class="experience" id="experiencia">
+        <div class="contenido-seccion">
+            <h1 class="experience-title" style="-webkit-text-stroke: 2px #4ab7df;">Experiencia</h1>
+            <!-- -webkit-text-stroke es una propiedad de Css que especifica el ancho y el color de los trazos de los caracteres de texto-->
+        </div>
+        <div class="fila">
 
-          <!------------------------- COLUMNA EDUCACION ------------------------>
-          <div class="col izquierda">
-              <h2 class="subtitle">Académica
-                  <!--BOTONES-->
-                  <!--Boton y modal AGREGAR Empleos-->
-                  <div class="col" *ngIf="onEdition"> 
-                    <button type="button" class="btn agregar" data-bs-toggle="modal" data-bs-target="#plus-edu-Modal">
-                        <li><i class="fa-sharp fa-solid fa-plus"></i></li>
-                    </button>
-                      <div class="modal fade modal-lg" id="plus-edu-Modal" tabindex="-1" aria-labelledby="plus-edu-ModalLabel" aria-hidden="true">
-                          <div class="modal-dialog modal-content">
-                              <div class="modal-header">
-                                  <h3 class="modal-title w-100 text-center"> Estudios</h3> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body pb-0">
-                                  <div class="mb-3"> <label class="form-group">Institución</label>
-                                      <div class="col-sm-12"><input type="text" class="form-control"> </div>
-                                  </div>
-                                  <div class="mb-3"> <label class="form-group">Título Académico</label>
-                                      <div class="col-sm-12"> <input type="text" class="form-control"> </div>
-                                  </div>
-                                  <div class="mb-3"> <label class="form-group">Fecha</label>
-                                      <div class="col-sm-12"> <input type="text" class="form-control"> </div>
-                                  </div>
-                                  <div class="mb-3"> <label class="form-group">Descripción</label> <textarea class="form-control" rows="3"></textarea> </div>
-                              </div>
-                              <div class="modal-footer"> <button type="button" class="btn btn-primary">Agregar</button> </div>
-                          </div>
-                      </div>
-                      <!--Botones eliminar Educacion-->  
-                      <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
-                          <li><i class="fa-solid fa-trash"></i></li>
-                      </button> <!-- Modal Educacion-->
-                      <!--coloco el modal una vez por columna y lo llamo mediante sus botones (y en las demas secciones)-->
-                      <div class="modal fade" id="educacionModal" tabindex="-1" aria-labelledby="educacionModalLabel" aria-hidden="true">
-                          <div class="modal-dialog modal-content">
-                              <div class="modal-header">
-                                  <h3 class="modal-title w-100 text-center">Educación</h3> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                                  <div class="mb-1"> <label class="form-group pb-2">Nuevo título </label>
-                                      <div class="col-sm-12"> <input type="text" class="form-control"> </div>
-                                  </div>
-                              </div>
-                              <div class="modal-footer pb-1 pt-1"> <button type="button" class="btn btn-primary">Guardar</button> </div>
-                          </div>
-                      </div>
-                  </div>
-              </h2>
-              <div class="item izq" *ngFor="let edu of estudios">
-                  <h3 class="nombre-institucion">{{edu.institucion}}</h3>
-                  <h4 class="title-academica">{{edu.titulo_insti}}</h4> <span class="date">{{edu.inicio + ' - ' + edu.fin}}</span>
-                  <p>{{edu.descripcion}}</p>
-                  <!--Boton editar/eliminar Estudios-->
-                  <div class="col" *ngIf="onEdition"> <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#estudiosModal"> <i class="fa-solid fa-pencil"></i> </button> <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
-                          <li><i class="fa-solid fa-trash"></i></li>
-                      </button>
-                      <!--Modal Estudios-->
-                      <div class="modal fade modal-lg" id="estudiosModal" tabindex="-1" aria-labelledby="estudiosModalLabel" aria-hidden="true">
-                          <div class="modal-dialog modal-content">
-                              <div class="modal-header">
-                                  <h3 class="modal-title w-100 text-center"> Estudios</h3> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body pb-0">
-                                  <div class="mb-3"> <label class="form-group">Institución</label>
-                                      <div class="col-sm-12"><input type="text" class="form-control"> </div>
-                                  </div>
-                                  <div class="mb-3"> <label class="form-group">Título Académico</label>
-                                      <div class="col-sm-12"> <input type="text" class="form-control"> </div>
-                                  </div>
-                                  <div class="mb-3"> <label class="form-group">Fecha</label>
-                                      <div class="col-sm-12"> <input type="text" class="form-control"> </div>
-                                  </div>
-                                  <div class="mb-3"> <label class="form-group">Descripción</label> <textarea class="form-control" rows="3"></textarea> </div>
-                              </div>
-                              <div class="modal-footer"> <button type="button" class="btn btn-primary">Guardar</button> </div>
-                          </div>
-                      </div>
-                  </div>
-              </div>
-          </div>
-
-
-          <!---------------------------- COLUMNA TRABAJO --------------------------->
-          <div class="col derecha">
-              <h2 class="subtitle">Laboral
-                  <!--BOTONES-->
-                  <!--Boton y modal AGREGAR Empleos-->
-                  <div class="col" *ngIf="onEdition"> <button type="button" class="btn agregar" data-bs-toggle="modal" data-bs-target="#plus-empleosModal">
-                          <li><i class="fa-sharp fa-solid fa-plus"></i></li>
-                      </button>
-                      <div class="modal fade modal-lg" id="plus-empleosModal" tabindex="-1" aria-labelledby="plus-empleosModalLabel" aria-hidden="true">
-                          <div class="modal-dialog modal-content">
-                              <div class="modal-header">
-                                  <h3 class="modal-title w-100 text-center"> Empleos</h3> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body pb-0">
-                                  <div class="mb-3"> <label class="form-group">Empresa</label>
-                                      <div class="col-sm-12"><input type="text" class="form-control"> </div>
-                                  </div>
-                                  <div class="mb-3"> <label class="form-group">Título Laboral</label>
-                                      <div class="col-sm-12"> <input type="text" class="form-control"> </div>
-                                  </div>
-                                  <div class="mb-3"> <label class="form-group">Fecha</label>
-                                      <div class="col-sm-12"> <input type="text" class="form-control"> </div>
-                                  </div>
-                                  <div class="mb-3"> <label class="form-group">Descripción</label> <textarea class="form-control" rows="3"></textarea> </div>
-                              </div>
-                              <div class="modal-footer"> <button type="button" class="btn btn-primary">Agregar</button> </div>
-                          </div>
-                      </div>
-                      <!--Botones eliminar Trabajo --> 
-                      <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
-                          <li><i class="fa-solid fa-trash"></i></li>
-                      </button> <!-- Modal Trabajo-->
-                      <!--coloco el modal una vez por columna y lo llamo mediante sus botones-->
-                      <div class="modal fade" id="trabajoModal" tabindex="-1" aria-labelledby="trabajoModalLabel" aria-hidden="true">
-                          <div class="modal-dialog modal-content">
-                              <div class="modal-header">
-                                  <h3 class="modal-title w-100 text-center">Trabajo</h3> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body">
-                                  <div class="mb-1"> <label class="form-group pb-2">Nuevo título </label>
-                                      <div class="col-sm-12"> <input type="text" class="form-control"> </div>
-                                  </div>
-                              </div>
-                              <div class="modal-footer pb-1 pt-1"> <button type="button" class="btn btn-primary">Guardar</button> </div>
-                          </div>
-                      </div>
-                  </div>
-              </h2>
-              <div class="item der" *ngFor="let exp of experiencia">
-                  <h3 class="nombre-empresa">{{exp.empresa}}</h3>
-                  <h4 class="title-laboral">{{exp.puesto}}</h4> <span class="date">{{exp.fecha_inicio + ' - ' + exp.fecha_fin}}</span>
-                  <p>{{exp.descripcion}}</p>
-                  <!--Boton editar/eliminar Empleos-->
-                    <div class="col" *ngIf="onEdition"> <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#empleosModal"> <i class="fa-solid fa-pencil"></i> </button> <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
-                          <li><i class="fa-solid fa-trash"></i></li>
-                      </button>
-                      <!--Modal Empleos-->
-                      <div class="modal fade modal-lg" id="empleosModal" tabindex="-1" aria-labelledby="empleosModalLabel" aria-hidden="true">
-                          <div class="modal-dialog modal-content">
-                              <div class="modal-header">
-                                  <h3 class="modal-title w-100 text-center"> Empleos</h3> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                              </div>
-                              <div class="modal-body pb-0">
-                                  <div class="mb-3"> <label class="form-group">Empresa</label>
-                                      <div class="col-sm-12"><input type="text" class="form-control"> </div>
-                                  </div>
-                                  <div class="mb-3"> <label class="form-group">Título Laboral</label>
-                                      <div class="col-sm-12"> <input type="text" class="form-control"> </div>
-                                  </div>
-                                  <div class="mb-3"> <label class="form-group">Fecha</label>
-                                      <div class="col-sm-12"> <input type="text" class="form-control"> </div>
-                                  </div>
-                                  <div class="mb-3"> <label class="form-group">Descripción</label> <textarea class="form-control" rows="3"></textarea> </div>
-                              </div>
-                              <div class="modal-footer"> <button type="button" class="btn btn-primary">Guardar</button> </div>
-                          </div>
-                      </div>
-                    </div>
-                </div>
-            </div>
-        </div> 
-          <!-- Uso Carrusel para darle movimiento a los certificados(img)-->
-        <div class="container text-center" id="Carrusel" *ngFor="let edu of estudios"> 
-            <div class="row">
-                <div id="carouselCertificados" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
-                  <div class="carousel-inner">
-                    <div class="carousel-item active text-center">
-                      <img [src]="edu.certificados" class="img-fluid" alt="Certificado">
-                    </div>
-                  </div>   
-                <!--Flechas para cambiar de img-->
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselCertificados" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselCertificados" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-                 </div>
-               </div>
-                <!--Boton editar/eliminar Certificados-->
-                <div class="col" *ngIf="onEdition"> 
-                    <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#certificadosModal"> 
-                        <i class="fa-solid fa-pencil"></i> 
-                    </button> 
-                    <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
-                        <li><i class="fa-solid fa-trash"></i></li>
-                    </button> <!-- Modal Certificados-->
-                    <div class="modal fade" id="certificadosModal" tabindex="-1" aria-labelledby="certificadosModalLabel" aria-hidden="true">
-                        <div class="modal-dialog modal-content">
-                            <div class="modal-header">
-                                <h3 class="modal-title w-100 text-center">Certificados</h3> <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <!------------------------- COLUMNA EDUCACION ------------------------>
+            <div class="col izquierda">
+                <h2 class="subtitle">Académica
+                    <!--BOTONES-->
+                    <!--Boton y modal AGREGAR Empleos-->
+                    <div class="col" *ngIf="onEdition">
+                        <button type="button" class="btn agregar" data-bs-toggle="modal"
+                            data-bs-target="#plus-edu-Modal">
+                            <li><i class="fa-sharp fa-solid fa-plus"></i></li>
+                        </button>
+                        <div class="modal fade modal-lg" id="plus-edu-Modal" tabindex="-1"
+                            aria-labelledby="plus-edu-ModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title w-100 text-center"> Estudios</h3> <button type="button"
+                                        class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body pb-0">
+                                    <div class="mb-3"> <label class="form-group">Institución</label>
+                                        <div class="col-sm-12"><input type="text" class="form-control"> </div>
+                                    </div>
+                                    <div class="mb-3"> <label class="form-group">Título Académico</label>
+                                        <div class="col-sm-12"> <input type="text" class="form-control"> </div>
+                                    </div>
+                                    <div class="mb-3"> <label class="form-group">Fecha</label>
+                                        <div class="col-sm-12"> <input type="text" class="form-control"> </div>
+                                    </div>
+                                    <div class="mb-3"> <label class="form-group">Descripción</label> <textarea
+                                            class="form-control" rows="3"></textarea> </div>
+                                </div>
+                                <div class="modal-footer"> <button type="button"
+                                        class="btn btn-primary">Agregar</button> </div>
                             </div>
-                            <div class="modal-body">
-                                <div class="mb-1"> <label class="form-group pb-2">Nueva imagen</label>
-                                    <div class="col-sm-12"> <input class="form-control" placeholder="URL"> 
+                        </div>
+                        <!--Botones eliminar Educacion-->
+                        <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
+                            <li><i class="fa-solid fa-trash"></i></li>
+                        </button> <!-- Modal Educacion-->
+                        <!--coloco el modal una vez por columna y lo llamo mediante sus botones (y en las demas secciones)-->
+                        <div class="modal fade" id="educacionModal" tabindex="-1" aria-labelledby="educacionModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title w-100 text-center">Educación</h3> <button type="button"
+                                        class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mb-1"> <label class="form-group pb-2">Nuevo título </label>
+                                        <div class="col-sm-12"> <input type="text" class="form-control"> </div>
                                     </div>
                                 </div>
+                                <div class="modal-footer pb-1 pt-1"> <button type="button"
+                                        class="btn btn-primary">Guardar</button> </div>
                             </div>
-                            <div class="modal-footer pb-1 pt-1"> <button type="button" class="btn btn-primary">Guardar</button> 
+                        </div>
+                    </div>
+                </h2>
+                <div class="item izq" *ngFor="let edu of estudios">
+                    <h3 class="nombre-institucion">{{edu.institucion}}</h3>
+                    <h4 class="title-academica">{{edu.titulo_insti}}</h4> <span class="date">{{edu.inicio + ' - ' +
+                        edu.fin}}</span>
+                    <p>{{edu.descripcion}}</p>
+                    <!--Boton editar/eliminar Estudios-->
+                    <div class="col" *ngIf="onEdition"> <button type="button" class="btn pencil" data-bs-toggle="modal"
+                            data-bs-target="#estudiosModal"> <i class="fa-solid fa-pencil"></i> </button> <button
+                            type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
+                            <li><i class="fa-solid fa-trash"></i></li>
+                        </button>
+                        <!--Modal Estudios-->
+                        <div class="modal fade modal-lg" id="estudiosModal" tabindex="-1"
+                            aria-labelledby="estudiosModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title w-100 text-center"> Estudios</h3> <button type="button"
+                                        class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body pb-0">
+                                    <div class="mb-3"> <label class="form-group">Institución</label>
+                                        <div class="col-sm-12"><input type="text" class="form-control"> </div>
+                                    </div>
+                                    <div class="mb-3"> <label class="form-group">Título Académico</label>
+                                        <div class="col-sm-12"> <input type="text" class="form-control"> </div>
+                                    </div>
+                                    <div class="mb-3"> <label class="form-group">Fecha</label>
+                                        <div class="col-sm-12"> <input type="text" class="form-control"> </div>
+                                    </div>
+                                    <div class="mb-3"> <label class="form-group">Descripción</label> <textarea
+                                            class="form-control" rows="3"></textarea> </div>
+                                </div>
+                                <div class="modal-footer"> <button type="button"
+                                        class="btn btn-primary">Guardar</button> </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div> 
-        </section>
-    </div>
-          
-         
+            </div>
+
+
+            <!---------------------------- COLUMNA TRABAJO --------------------------->
+            <div class="col derecha">
+                <h2 class="subtitle">Laboral
+                    <!--BOTONES-->
+                    <!--Boton y modal AGREGAR Empleos-->
+                    <div class="col" *ngIf="onEdition"> <button type="button" class="btn agregar" data-bs-toggle="modal"
+                            data-bs-target="#plus-empleosModal">
+                            <li><i class="fa-sharp fa-solid fa-plus"></i></li>
+                        </button>
+                        <div class="modal fade modal-lg" id="plus-empleosModal" tabindex="-1"
+                            aria-labelledby="plus-empleosModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title w-100 text-center"> Empleos</h3> <button type="button"
+                                        class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body pb-0">
+                                    <div class="mb-3"> <label class="form-group">Empresa</label>
+                                        <div class="col-sm-12"><input type="text" class="form-control"> </div>
+                                    </div>
+                                    <div class="mb-3"> <label class="form-group">Título Laboral</label>
+                                        <div class="col-sm-12"> <input type="text" class="form-control"> </div>
+                                    </div>
+                                    <div class="mb-3"> <label class="form-group">Fecha</label>
+                                        <div class="col-sm-12"> <input type="text" class="form-control"> </div>
+                                    </div>
+                                    <div class="mb-3"> <label class="form-group">Descripción</label> <textarea
+                                            class="form-control" rows="3"></textarea> </div>
+                                </div>
+                                <div class="modal-footer"> <button type="button"
+                                        class="btn btn-primary">Agregar</button> </div>
+                            </div>
+                        </div>
+                        <!--Botones eliminar Trabajo -->
+                        <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
+                            <li><i class="fa-solid fa-trash"></i></li>
+                        </button> <!-- Modal Trabajo-->
+                        <!--coloco el modal una vez por columna y lo llamo mediante sus botones-->
+                        <div class="modal fade" id="trabajoModal" tabindex="-1" aria-labelledby="trabajoModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title w-100 text-center">Trabajo</h3> <button type="button"
+                                        class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="mb-1"> <label class="form-group pb-2">Nuevo título </label>
+                                        <div class="col-sm-12"> <input type="text" class="form-control"> </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer pb-1 pt-1"> <button type="button"
+                                        class="btn btn-primary">Guardar</button> </div>
+                            </div>
+                        </div>
+                    </div>
+                </h2>
+                <div class="item der" *ngFor="let exp of experiencia">
+                    <h3 class="nombre-empresa">{{exp.empresa}}</h3>
+                    <h4 class="title-laboral">{{exp.puesto}}</h4> <span class="date">{{exp.fecha_inicio + ' - ' +
+                        exp.fecha_fin}}</span>
+                    <p>{{exp.descripcion}}</p>
+                    <!--Boton editar/eliminar Empleos-->
+                    <div class="col" *ngIf="onEdition"> <button type="button" class="btn pencil" data-bs-toggle="modal"
+                            data-bs-target="#empleosModal"> <i class="fa-solid fa-pencil"></i> </button> <button
+                            type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
+                            <li><i class="fa-solid fa-trash"></i></li>
+                        </button>
+                        <!--Modal Empleos-->
+                        <div class="modal fade modal-lg" id="empleosModal" tabindex="-1"
+                            aria-labelledby="empleosModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-content">
+                                <div class="modal-header">
+                                    <h3 class="modal-title w-100 text-center"> Empleos</h3> <button type="button"
+                                        class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body pb-0">
+                                    <div class="mb-3"> <label class="form-group">Empresa</label>
+                                        <div class="col-sm-12"><input type="text" class="form-control"> </div>
+                                    </div>
+                                    <div class="mb-3"> <label class="form-group">Título Laboral</label>
+                                        <div class="col-sm-12"> <input type="text" class="form-control"> </div>
+                                    </div>
+                                    <div class="mb-3"> <label class="form-group">Fecha</label>
+                                        <div class="col-sm-12"> <input type="text" class="form-control"> </div>
+                                    </div>
+                                    <div class="mb-3"> <label class="form-group">Descripción</label> <textarea
+                                            class="form-control" rows="3"></textarea> </div>
+                                </div>
+                                <div class="modal-footer"> <button type="button"
+                                        class="btn btn-primary">Guardar</button> </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Uso Carrusel para darle movimiento a los certificados(img)-->
+        <div class="container text-center" id="Carrusel" *ngFor="let cert of estudios">
+            <div class="row">
+                <div id="carouselCertificados" class="carousel slide" data-bs-ride="carousel" data-bs-touch="true">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active text-center">
+                            <img [src]="cert.certificados" class="img-fluid" alt="Certificado">
+                        </div>
+                    </div>
+                    <!--Flechas para cambiar de img-->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCertificados"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselCertificados"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            <!--Boton editar/eliminar Certificados-->
+            <div class="col" *ngIf="onEdition">
+                <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#certificadosModal">
+                    <i class="fa-solid fa-pencil"></i>
+                </button>
+                <button type="button" class="btn trash" data-bs-toggle="modal" data-bs-target="#eliminar-Modal">
+                    <li><i class="fa-solid fa-trash"></i></li>
+                </button> <!-- Modal Certificados-->
+                <div class="modal fade" id="certificadosModal" tabindex="-1" aria-labelledby="certificadosModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-content">
+                        <div class="modal-header">
+                            <h3 class="modal-title w-100 text-center">Certificados</h3> <button type="button"
+                                class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="mb-1"> <label class="form-group pb-2">Nueva imagen</label>
+                                <div class="col-sm-12"> <input class="form-control" placeholder="URL">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer pb-1 pt-1"> <button type="button"
+                                class="btn btn-primary">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
