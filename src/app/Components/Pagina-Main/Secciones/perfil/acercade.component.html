@@ -1,8 +1,8 @@
 <!---------------------- Perfil ---------------------->
 <header id="banner">
   <div class="horizontal-padding vertical-padding">
-    <section class="profile" id="perfil" *ngFor="let pers of personasperfil">
-      <div class="profile-info" >
+    <section class="profile" id="perfil">
+      <div class="profile-info" *ngFor="let pers of personasperfil">
         <h3 class="profile-small-title">Bienvenido, soy </h3>
         <h1 class="profile-title">{{pers.nombre_apellido}}</h1>
         <h2 class="profile-titulo-academico">{{pers.titulo_acad}}</h2>
@@ -97,7 +97,7 @@
       </div>
       <!---------- IMG Perfil----------->
       <span class="profile-img-section">
-        <img class="profile-img" [src]="pers.foto_url" alt="programador" />
+        <img class="profile-img" src="../../../../../assets/img/fototraje2.jpg" alt="programador" />
         <!--Boton editar IMG Perfil-->
         <div class="col" *ngIf="onEdition">
           <button type="button" class="btn pencil" data-bs-toggle="modal" data-bs-target="#imgPerfilModal">
